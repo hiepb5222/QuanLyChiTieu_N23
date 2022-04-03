@@ -7,6 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.quanlychitieu_n23.ui.Chi.KhoanChiFragment;
 import com.example.quanlychitieu_n23.ui.Thu.KhoanThuFragment;
+import com.example.quanlychitieu_n23.ui.Thu.LoaiThuFragment;
 
 public class ThuViewPager2Adapter extends FragmentStateAdapter {
     public ThuViewPager2Adapter(@NonNull FragmentActivity fragmentActivity) {
@@ -22,7 +23,7 @@ public class ThuViewPager2Adapter extends FragmentStateAdapter {
             fragment = KhoanThuFragment.newInstance();
         }
         else {
-            fragment = KhoanChiFragment.newInstance();
+            fragment = LoaiThuFragment.newInstance();
         }
 
         return fragment;

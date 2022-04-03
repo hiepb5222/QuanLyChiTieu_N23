@@ -28,11 +28,6 @@
         android:label="fragment_chi"
         tools:layout="@layout/fragment_chi" />
     <fragment
-        android:id="@+id/nav_thu"
-        android:name="com.example.quanlychitieu_n23.ui.Thu.ThuFragment"
-        android:label="fragment_thu"
-        tools:layout="@layout/fragment_thu" />
-    <fragment
         android:id="@+id/nav_gioithieu"
         android:name="com.example.quanlychitieu_n23.ui.gioithieu.GioiThieuFragment"
         android:label="fragment_gioi_thieu"
@@ -46,4 +41,9 @@
         android:id="@+id/nav_thoat"
         android:name="com.example.quanlychitieu_n23.ui.home.HomeFragment"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/thuFragment"
+        android:name="com.example.quanlychitieu_n23.ui.Thu.ThuFragment"
+        android:label="fragment_thu"
+        tools:layout="@layout/fragment_thu" />
 </navigation>
