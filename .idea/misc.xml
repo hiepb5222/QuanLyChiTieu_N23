@@ -6,6 +6,8 @@
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/content_main.xml" value="0.13496376811594202" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/fragment_chi.xml" value="0.192481884057971" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/fragment_thu.xml" value="0.24456521739130435" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/loai_thu_fragment.xml" value="0.1734375" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/recyclerview_loai_thu_item.xml" value="0.264" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/menu/activity_main_drawer.xml" value="0.264" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/menu/main.xml" value="0.25" />
       </map>
