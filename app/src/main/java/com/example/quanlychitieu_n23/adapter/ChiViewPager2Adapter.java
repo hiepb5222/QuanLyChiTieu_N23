@@ -25,11 +25,11 @@ public class ChiViewPager2Adapter extends FragmentStateAdapter {
         {
             fragment= LoaiChiFragment.newInstance();
         }
-        return null;
+        return fragment;
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 2;
     }
 }
