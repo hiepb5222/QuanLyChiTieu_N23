@@ -53,7 +53,7 @@ public class ChiFragment extends Fragment {
                     tab.setIcon(R.drawable.ic_menu_camera);
                 }
             }
-        });
+        }).attach();
     }
 
     @Override
