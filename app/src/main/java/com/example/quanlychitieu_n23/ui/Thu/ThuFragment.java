@@ -21,6 +21,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 public class ThuFragment extends Fragment {
     private ViewPager2 mVp;
     private TabLayout mTl;
+
     public ThuFragment() {
         // Required empty public constructor
     }
