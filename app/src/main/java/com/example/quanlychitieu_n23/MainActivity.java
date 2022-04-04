@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 if(fragments instanceof LoaiThuFragment){
                     LoaiThuDialog dialog=new LoaiThuDialog(currentContext,
                             (LoaiThuFragment) fragment);
-                    dialog.show();
+                   dialog.show();
                 }
             }
         });
