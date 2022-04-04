@@ -31,10 +31,10 @@ public class LoaiThuFragment extends Fragment {
         return new LoaiThuFragment();
     }
 
-    public LoaiThuViewModel getViewModel()
-    {
+    public LoaiThuViewModel getViewModel() {
         return mViewModel;
     }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {

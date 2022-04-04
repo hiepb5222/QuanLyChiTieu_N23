@@ -1,10 +1,12 @@
 package com.example.quanlychitieu_n23;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
 import com.example.quanlychitieu_n23.Dialog.LoaiThuDialog;
+import com.example.quanlychitieu_n23.ui.Chi.ChiFragment;
 import com.example.quanlychitieu_n23.ui.Thu.LoaiThuFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -43,11 +45,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 List<Fragment> fragments =getSupportFragmentManager().getFragments();
                 Fragment fragment=fragments.get(fragments.size()-1);
-                if(fragments instanceof LoaiThuFragment){
-                    LoaiThuDialog dialog=new LoaiThuDialog(currentContext,
-                            (LoaiThuFragment) fragment);
-                   dialog.show();
+                if(fragment instanceof LoaiThuFragment){
+                   LoaiThuDialog dialog=new LoaiThuDialog(currentContext,
+                (LoaiThuFragment) fragment);
+                  dialog.show();
                 }
+
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
