@@ -38,11 +38,11 @@ public class LoaiThuDialog {
                 .setPositiveButton("Luu", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        LoaiThu lt= new LoaiThu();
+                        LoaiThu lt=new LoaiThu();
                         lt.ten=etName.getText().toString();
                         mViewModel.insert(lt);
-                        Toast.makeText(context,"Loai thu duoc luu",Toast.LENGTH_SHORT).show();
-                }
+                        Toast.makeText(context, "Loai Thu duoc luu", Toast.LENGTH_SHORT).show();
+                    }
                 });
                 mDialog=builder.create();
     }
