@@ -28,6 +28,9 @@ public class LoaiThuRepository {
     public void insert(LoaiThu loaiThu){
         new InsertAsyncTask(mLoaiThuDao).execute(loaiThu);
     }
+    public void delete(LoaiThu loaiThu){
+        new DeleteAsyncTask(mLoaiThuDao).execute(loaiThu);
+    }
     class InsertAsyncTask extends AsyncTask<LoaiThu,Void,Void>{
         private LoaiThuDao mLoaiThuDao;
         public InsertAsyncTask(LoaiThuDao loaiThuDao)
@@ -40,4 +43,18 @@ public class LoaiThuRepository {
             return null;
         }
     }
+
+    class DeleteAsyncTask extends AsyncTask<LoaiThu,Void,Void>{
+        private LoaiThuDao mLoaiThuDao;
+        public DeleteAsyncTask(LoaiThuDao loaiThuDao)
+        {
+            this.mLoaiThuDao= loaiThuDao;
+        }
+        @Override
+        protected Void doInBackground(LoaiThu... loaiThus) {
+            mLoaiThuDao.delete(loaiThus[0]);
+            return null;
+        }
+    }
+
 }
