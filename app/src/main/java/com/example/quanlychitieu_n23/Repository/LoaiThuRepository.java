@@ -21,12 +21,12 @@ public class LoaiThuRepository {
         this.mLoaiThuDao = AppDatabase.getDatabase(application).loaiThuDao();
         mAllLoaiThu=mLoaiThuDao.findall();
     }
-    public LiveData<List<LoaiThu>> getmAllLoaiThu()
+    public LiveData<List<LoaiThu>> getAllLoaiThu()
     {
         return mAllLoaiThu;
     }
     public void insert(LoaiThu loaiThu){
-        new InsertAsyncTask(mLoaiThuDao).execute();
+        new InsertAsyncTask(mLoaiThuDao).execute(loaiThu);
     }
     class InsertAsyncTask extends AsyncTask<LoaiThu,Void,Void>{
         private LoaiThuDao mLoaiThuDao;

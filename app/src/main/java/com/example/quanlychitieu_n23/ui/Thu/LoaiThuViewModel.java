@@ -19,7 +19,7 @@ public class LoaiThuViewModel extends AndroidViewModel {
     public LoaiThuViewModel(@NonNull Application application) {
         super(application);
         mLoaiThuRepository= new LoaiThuRepository(application);
-        mAllLoaiThu =mLoaiThuRepository.getmAllLoaiThu();
+        mAllLoaiThu =mLoaiThuRepository.getAllLoaiThu();
     }
     public LiveData<List<LoaiThu>> getAllLoaiThu() {
         return mAllLoaiThu;

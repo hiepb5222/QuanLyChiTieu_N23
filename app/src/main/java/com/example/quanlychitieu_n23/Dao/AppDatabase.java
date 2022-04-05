@@ -48,8 +48,8 @@ public abstract class AppDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            String[] loaithu =new String[]{"Luong","Thuong","Co phieu"};
-            for (String it:loaithu)
+            String[] loaithus =new String[]{"Luong","Thuong","Co phieu"};
+            for (String it:loaithus)
             {
                 LoaiThu lt=new LoaiThu();
                 lt.ten=it;
