@@ -44,6 +44,12 @@ public class LoaiThuRecyclerviewAdapter extends RecyclerView.Adapter<LoaiThuRecy
         return 0;
         return  mList.size();
     }
+    public LoaiThu getItem(int postision){
+        if(mList==null || postision>= mList.size()){
+            return null;
+        }
+        return mList.get(postision);
+    }
     public void setList(List<LoaiThu>mList)
     {
         this.mList=mList;
