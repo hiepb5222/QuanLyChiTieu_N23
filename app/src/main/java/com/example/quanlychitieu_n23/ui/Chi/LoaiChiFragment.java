@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.quanlychitieu_n23.Dao.LoaiChiDao;
+import com.example.quanlychitieu_n23.Dialog.LoaiChiDetailDialog;
 import com.example.quanlychitieu_n23.Dialog.LoaiChiDialog;
 import com.example.quanlychitieu_n23.Entity.LoaiChi;
 import com.example.quanlychitieu_n23.Entity.LoaiThu;
@@ -62,6 +63,14 @@ public class LoaiChiFragment extends Fragment {
                 LoaiChi loaiChi =adapter2.getItem(position);
                 LoaiChiDialog dialog = new LoaiChiDialog(getActivity(),chiFragment, loaiChi);
                 dialog.sshow();
+            }
+        });
+        adapter2.setOnItemViewListener(new ItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                LoaiChi loaiChi =adapter2.getItem(position);
+                LoaiChiDetailDialog dialog = new LoaiChiDetailDialog(getActivity(),chiFragment, loaiChi);
+                dialog.show();
             }
         });
 
