@@ -17,9 +17,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.quanlychitieu_n23.Dao.LoaiChiDao;
+import com.example.quanlychitieu_n23.Dialog.LoaiChiDialog;
 import com.example.quanlychitieu_n23.Entity.LoaiChi;
 import com.example.quanlychitieu_n23.Entity.LoaiThu;
 import com.example.quanlychitieu_n23.R;
+import com.example.quanlychitieu_n23.adapter.ItemClickListener;
 import com.example.quanlychitieu_n23.adapter.LoaiChiRecyAdapter;
 
 import java.util.List;
@@ -28,6 +31,7 @@ public class LoaiChiFragment extends Fragment {
     private RecyclerView recyclerView;
     private LoaiChiRecyAdapter adapter2;
     private LoaiChiViewModel mViewModel2;
+
 
     public static LoaiChiFragment newInstance() {
         return new LoaiChiFragment();
@@ -48,6 +52,18 @@ public class LoaiChiFragment extends Fragment {
         adapter2 = new LoaiChiRecyAdapter(getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter2);
+
+        final LoaiChiFragment chiFragment = this;
+
+        adapter2.setOnItemClickListener(new ItemClickListener() {
+
+            @Override
+            public void onItemClick(int position) {
+                LoaiChi loaiChi =adapter2.getItem(position);
+                LoaiChiDialog dialog = new LoaiChiDialog(getActivity(),chiFragment, loaiChi);
+                dialog.sshow();
+            }
+        });
 
         ItemTouchHelper helper=new ItemTouchHelper(
                 new ItemTouchHelper.SimpleCallback(0,

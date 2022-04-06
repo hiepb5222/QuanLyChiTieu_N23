@@ -22,13 +22,21 @@ public class LoaiChiDialog {
     private TextInputEditText etId2,etName2;
     private boolean mEditmode;
 
-    public LoaiChiDialog(final Context context,LoaiChiFragment fragment)
+    public LoaiChiDialog(final Context context,LoaiChiFragment fragment,LoaiChi ... loaiChi)
     {
         mViewModel2 =fragment.getmViewModel2();
         mLayoutInflater2 = LayoutInflater.from(context);
         View view = mLayoutInflater2.inflate(R.layout.dialog_loai_chi,null);
         etId2 =view.findViewById(R.id.etid2) ;
         etName2 = view.findViewById(R.id.etName2);
+        if(loaiChi != null && loaiChi.length>0){
+            etId2.setText(""+loaiChi[0].idChi);
+            etName2.setText(loaiChi[0].tenLoaiChi);
+            mEditmode=true;
+        }
+        else{
+            mEditmode =false;
+        }
         AlertDialog.Builder builder = new AlertDialog.Builder(context)
                 .setView(view)
                 .setNegativeButton("Đóng", new DialogInterface.OnClickListener() {
@@ -42,9 +50,13 @@ public class LoaiChiDialog {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         LoaiChi lc = new LoaiChi();
                         lc.tenLoaiChi = etName2.getText().toString();
+                        if (mEditmode){
+                            lc.idChi =Integer.parseInt(etId2.getText().toString());
+                            mViewModel2.update2(lc);
+                        }else {
                         mViewModel2.insert2(lc);
                         Toast.makeText(context,"Đã được lưu",Toast.LENGTH_SHORT).show();
-                    }
+                    }}
                 });
         mDialog= builder.create();
 

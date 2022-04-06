@@ -28,6 +28,9 @@ public class LoaiChiRep {
     public void delete(LoaiChi loaiChi){
         new DeleteAsyncTask(loaiChiDao).execute(loaiChi);
     }
+    public void update(LoaiChi loaiChi){
+        new UpdateAsyncTask(loaiChiDao).execute(loaiChi);
+    }
 
     public void insert2(LoaiChi loaiChi){
         new InsertAsyncTask2(loaiChiDao).execute(loaiChi);
@@ -54,6 +57,19 @@ public class LoaiChiRep {
         @Override
         protected Void doInBackground(LoaiChi... loaiChis) {
             mLoaiChiDao.deleteChi(loaiChis[0]);
+            return null;
+        }
+    }
+    class UpdateAsyncTask extends AsyncTask<LoaiChi,Void,Void>{
+        private LoaiChiDao mLoaiChiDao;
+        public UpdateAsyncTask(LoaiChiDao loaiChiDao)
+        {
+            this.mLoaiChiDao= loaiChiDao;
+        }
+
+        @Override
+        protected Void doInBackground(LoaiChi... loaiChis) {
+            mLoaiChiDao.updateChi(loaiChis[0]);
             return null;
         }
     }
