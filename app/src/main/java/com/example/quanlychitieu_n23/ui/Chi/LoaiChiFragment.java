@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.quanlychitieu_n23.Entity.LoaiChi;
+import com.example.quanlychitieu_n23.Entity.LoaiThu;
 import com.example.quanlychitieu_n23.R;
 import com.example.quanlychitieu_n23.adapter.LoaiChiRecyAdapter;
 
@@ -46,6 +48,27 @@ public class LoaiChiFragment extends Fragment {
         adapter2 = new LoaiChiRecyAdapter(getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter2);
+
+        ItemTouchHelper helper=new ItemTouchHelper(
+                new ItemTouchHelper.SimpleCallback(0,
+                        ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT
+                ) {
+                    @Override
+                    public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                        return false;
+                    }
+
+                    @Override
+                    public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                        int position =viewHolder.getAdapterPosition();
+                        LoaiChi lt=adapter2.getItem(position);
+
+                        Toast.makeText(getActivity(),"Loại Chi đã được xóa",Toast.LENGTH_SHORT).show();
+                        mViewModel2.delete2(lt);
+                    }
+                }
+        );
+        helper.attachToRecyclerView(recyclerView);
     }
 
     @Override

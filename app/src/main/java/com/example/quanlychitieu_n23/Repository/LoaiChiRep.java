@@ -8,7 +8,9 @@ import androidx.lifecycle.LiveData;
 
 import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Dao.LoaiChiDao;
+import com.example.quanlychitieu_n23.Dao.LoaiThuDao;
 import com.example.quanlychitieu_n23.Entity.LoaiChi;
+import com.example.quanlychitieu_n23.Entity.LoaiThu;
 
 import java.util.List;
 
@@ -23,6 +25,10 @@ public class LoaiChiRep {
     public LiveData<List<LoaiChi>> getmAllLoaiChi() {
         return mAllLoaiChi;
     }
+    public void delete(LoaiChi loaiChi){
+        new DeleteAsyncTask(loaiChiDao).execute(loaiChi);
+    }
+
     public void insert2(LoaiChi loaiChi){
         new InsertAsyncTask2(loaiChiDao).execute(loaiChi);
     }
@@ -35,6 +41,19 @@ public class LoaiChiRep {
         @Override
         protected Void doInBackground(LoaiChi... loaiChis) {
             mLoaichidao.insertChi(loaiChis[0]);
+            return null;
+        }
+    }
+    class DeleteAsyncTask extends AsyncTask<LoaiChi,Void,Void>{
+        private LoaiChiDao mLoaiChiDao;
+        public DeleteAsyncTask(LoaiChiDao loaiChiDao)
+        {
+            this.mLoaiChiDao= loaiChiDao;
+        }
+
+        @Override
+        protected Void doInBackground(LoaiChi... loaiChis) {
+            mLoaiChiDao.deleteChi(loaiChis[0]);
             return null;
         }
     }

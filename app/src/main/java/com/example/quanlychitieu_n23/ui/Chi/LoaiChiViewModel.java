@@ -31,4 +31,8 @@ public class LoaiChiViewModel extends AndroidViewModel {
 
         mLoaiChiRep.insert2(loaiChi);
     }
+    public void delete2(LoaiChi loaiChi)
+    {
+        mLoaiChiRep.delete(loaiChi);
+    }
 }
