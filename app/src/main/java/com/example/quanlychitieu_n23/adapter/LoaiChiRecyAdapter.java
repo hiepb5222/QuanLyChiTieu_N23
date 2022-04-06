@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quanlychitieu_n23.Entity.LoaiChi;
+import com.example.quanlychitieu_n23.Entity.LoaiThu;
 import com.example.quanlychitieu_n23.R;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class LoaiChiRecyAdapter extends RecyclerView.Adapter<LoaiChiRecyAdapter.
     private LayoutInflater minflater;
     private List<LoaiChi> mlistchi;
     public LoaiChiRecyAdapter(Context context){
+
         minflater = LayoutInflater.from(context);
     }
     @NonNull
@@ -41,6 +43,12 @@ public class LoaiChiRecyAdapter extends RecyclerView.Adapter<LoaiChiRecyAdapter.
         if (mlistchi == null)
         return 0;
         return mlistchi.size();
+    }
+    public LoaiChi getItem(int postision){
+        if(mlistchi==null || postision>= mlistchi.size()){
+            return null;
+        }
+        return mlistchi.get(postision);
     }
 
     public void setlistchi(List<LoaiChi> mlistchi) {

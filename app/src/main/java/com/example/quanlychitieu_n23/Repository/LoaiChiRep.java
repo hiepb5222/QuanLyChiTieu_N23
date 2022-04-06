@@ -5,8 +5,8 @@ import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
-import com.example.quanlychitieu_n23.Dao.AppDatabase;
-import com.example.quanlychitieu_n23.Dao.ChiDataBase;
+
+import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Dao.LoaiChiDao;
 import com.example.quanlychitieu_n23.Entity.LoaiChi;
 
@@ -17,14 +17,14 @@ public class LoaiChiRep {
     private LiveData<List<LoaiChi>> mAllLoaiChi;
 
     public LoaiChiRep (Application application){
-        this.loaiChiDao = ChiDataBase.getInstance(application).loaiChiDao();
+        this.loaiChiDao = Database.getDatabase(application).loaiChiDao();
         mAllLoaiChi = loaiChiDao.findall();
     }
     public LiveData<List<LoaiChi>> getmAllLoaiChi() {
         return mAllLoaiChi;
     }
     public void insert2(LoaiChi loaiChi){
-        new InsertAsyncTask2(loaiChiDao).execute();
+        new InsertAsyncTask2(loaiChiDao).execute(loaiChi);
     }
     class InsertAsyncTask2 extends AsyncTask<LoaiChi,Void,Void>{
         private LoaiChiDao mLoaichidao;
@@ -34,7 +34,7 @@ public class LoaiChiRep {
 
         @Override
         protected Void doInBackground(LoaiChi... loaiChis) {
-            mLoaichidao.insert(loaiChis[0]);
+            mLoaichidao.insertChi(loaiChis[0]);
             return null;
         }
     }

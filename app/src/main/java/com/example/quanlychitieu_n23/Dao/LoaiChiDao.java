@@ -16,8 +16,8 @@ public interface LoaiChiDao {
     LiveData<List<LoaiChi>> findall();
 
     @Insert
-    void insert(LoaiChi loaiChi);
+    void insertChi(LoaiChi loaiChi);
 
     @Update
-    void update(LoaiChi loaiChi);
+    void updateChi(LoaiChi loaiChi);
 }

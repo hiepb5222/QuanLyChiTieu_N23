@@ -6,7 +6,7 @@ import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
-import com.example.quanlychitieu_n23.Dao.AppDatabase;
+import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Dao.LoaiThuDao;
 import com.example.quanlychitieu_n23.Entity.LoaiThu;
 
@@ -18,7 +18,7 @@ public class LoaiThuRepository {
     private LiveData<List<LoaiThu>> mAllLoaiThu;
 
     public LoaiThuRepository(Application application) {
-        this.mLoaiThuDao = AppDatabase.getDatabase(application).loaiThuDao();
+        this.mLoaiThuDao = Database.getDatabase(application).loaiThuDao();
         mAllLoaiThu=mLoaiThuDao.findall();
     }
     public LiveData<List<LoaiThu>> getAllLoaiThu()

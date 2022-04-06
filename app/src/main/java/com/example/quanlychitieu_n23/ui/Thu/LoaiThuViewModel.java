@@ -14,6 +14,7 @@ import com.example.quanlychitieu_n23.Repository.LoaiThuRepository;
 import java.util.List;
 
 public class LoaiThuViewModel extends AndroidViewModel {
+
     private LoaiThuRepository mLoaiThuRepository;
     private LiveData<List<LoaiThu>> mAllLoaiThu;
     public LoaiThuViewModel(@NonNull Application application) {
@@ -26,11 +27,13 @@ public class LoaiThuViewModel extends AndroidViewModel {
     }
     public void insert(LoaiThu loaiThu)
     {
+
         mLoaiThuRepository.insert(loaiThu);
     }
     // TODO: Implement the ViewModel
     public void delete(LoaiThu loaiThu)
     {
+
         mLoaiThuRepository.delete(loaiThu);
     }
 }

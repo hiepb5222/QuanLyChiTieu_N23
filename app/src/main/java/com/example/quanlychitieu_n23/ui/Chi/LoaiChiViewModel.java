@@ -23,9 +23,12 @@ public class LoaiChiViewModel extends AndroidViewModel {
     }
 
     public LiveData<List<LoaiChi>> getallloaichi() {
+
         return mallloaichi;
     }
+
     public void insert2(LoaiChi loaiChi){
+
         mLoaiChiRep.insert2(loaiChi);
     }
 }

@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.quanlychitieu_n23.Dialog.LoaiChiDialog;
 import com.example.quanlychitieu_n23.Dialog.LoaiThuDialog;
 import com.example.quanlychitieu_n23.ui.Chi.ChiFragment;
+import com.example.quanlychitieu_n23.ui.Chi.LoaiChiFragment;
 import com.example.quanlychitieu_n23.ui.Thu.LoaiThuFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -49,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
                    LoaiThuDialog dialog=new LoaiThuDialog(currentContext,
                 (LoaiThuFragment) fragment);
                   dialog.show();
+                }
+                else
+                {
+                    LoaiChiDialog dialog = new LoaiChiDialog(currentContext,(LoaiChiFragment) fragment);
+                    dialog.sshow();
                 }
 
             }

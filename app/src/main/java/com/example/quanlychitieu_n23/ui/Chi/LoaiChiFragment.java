@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.quanlychitieu_n23.Entity.LoaiChi;
 import com.example.quanlychitieu_n23.R;
@@ -30,6 +31,8 @@ public class LoaiChiFragment extends Fragment {
         return new LoaiChiFragment();
     }
 
+    public LoaiChiViewModel getmViewModel2(){return mViewModel2; }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -42,6 +45,7 @@ public class LoaiChiFragment extends Fragment {
         recyclerView = view.findViewById(R.id.Recyle2);
         adapter2 = new LoaiChiRecyAdapter(getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(adapter2);
     }
 
     @Override
