@@ -37,7 +37,7 @@ public class LoaiChiDialog {
                         mDialog.dismiss();
                     }
                 })
-                .setNegativeButton("Lưu", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Lưu", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         LoaiChi lc = new LoaiChi();
