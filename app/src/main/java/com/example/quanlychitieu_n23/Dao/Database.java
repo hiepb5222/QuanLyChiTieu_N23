@@ -1,6 +1,8 @@
 package com.example.quanlychitieu_n23.Dao;
 
+import android.app.Application;
 import android.content.Context;
+import android.os.AsyncTask;
 
 import androidx.annotation.NonNull;
 import androidx.room.Room;
@@ -39,5 +41,31 @@ public abstract class Database extends RoomDatabase {
             }
         }
         return INSTANCE;
+    }
+    public static class Populate extends AsyncTask<Void,Void,Void>{
+        private ThuDao thuDao;
+        private LoaiThuDao loaiThuDao;
+        public Populate(Database db){
+            thuDao=db.thuDao();
+            loaiThuDao=db.loaiThuDao();
+
+        }
+        @Override
+        protected Void doInBackground(Void... voids) {
+            String [] loaithus=new String[]{"Luong","Thuong","Co phieu"};
+            for(String it:loaithus){
+                LoaiThu lt=new LoaiThu();
+                lt.ten=it;
+                loaiThuDao.insert(lt);
+            }
+            Thu thu=new Thu();
+            thu.ten="Luong thang 1";
+            thu.sotien=3000;
+            thu.ltid=1;
+            thu.ghichu="";
+            thuDao.insert(thu);
+            return null;
+
+        }
     }
 }
