@@ -60,7 +60,7 @@ public class ChiDialog {
                         lc.ten = etName2.getText().toString();
                         lc.soTien = Float.parseFloat(etAmount.getText().toString());
                         lc.ghiChu= etNote.getText().toString();
-                        lc.idChi = spType.get
+
                         if (mEditmode){
                             lc.chiID =Integer.parseInt(etId2.getText().toString());
                             mViewModel2.update(lc);

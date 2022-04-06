@@ -5,11 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
-import com.example.quanlychitieu_n23.Dialog.ChiDialog;
 import com.example.quanlychitieu_n23.Dialog.LoaiChiDialog;
 import com.example.quanlychitieu_n23.Dialog.LoaiThuDialog;
 import com.example.quanlychitieu_n23.ui.Chi.ChiFragment;
-import com.example.quanlychitieu_n23.ui.Chi.KhoanChiFragment;
 import com.example.quanlychitieu_n23.ui.Chi.LoaiChiFragment;
 import com.example.quanlychitieu_n23.ui.Thu.LoaiThuFragment;
 import com.google.android.material.snackbar.Snackbar;
@@ -43,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        final MainActivity currentContext =this;
+        final MainActivity currentContext=this;
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,11 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 (LoaiThuFragment) fragment);
                   dialog.show();
                 }
-                else if (fragment instanceof KhoanChiFragment){
-                    ChiDialog dialog = new ChiDialog(currentContext, (KhoanChiFragment) fragment);
-                    dialog.sshow();
-                }
-                else if(fragment instanceof LoaiChiFragment){
+                else
+                {
                     LoaiChiDialog dialog = new LoaiChiDialog(currentContext,(LoaiChiFragment) fragment);
                     dialog.sshow();
                 }
