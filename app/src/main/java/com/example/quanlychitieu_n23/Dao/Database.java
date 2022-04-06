@@ -9,11 +9,13 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.quanlychitieu_n23.Entity.LoaiChi;
 import com.example.quanlychitieu_n23.Entity.LoaiThu;
+import com.example.quanlychitieu_n23.Entity.Thu;
 
-@androidx.room.Database(entities = {LoaiThu.class, LoaiChi.class} ,version = 1,exportSchema = false)
+@androidx.room.Database(entities = {LoaiThu.class, LoaiChi.class, Thu.class} ,version = 2,exportSchema = false)
 public abstract class Database extends RoomDatabase {
     public abstract LoaiChiDao loaiChiDao();
     public abstract LoaiThuDao loaiThuDao();
+    public abstract ThuDao thuDao();
 
     public static Database INSTANCE;
     public static RoomDatabase.Callback callback=new Callback() {
