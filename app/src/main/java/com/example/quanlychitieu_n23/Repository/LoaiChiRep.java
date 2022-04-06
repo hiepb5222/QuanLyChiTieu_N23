@@ -15,25 +15,25 @@ import com.example.quanlychitieu_n23.Entity.LoaiThu;
 import java.util.List;
 
 public class LoaiChiRep {
-    private LoaiChiDao loaiChiDao;
+    private LoaiChiDao mloaiChiDao;
     private LiveData<List<LoaiChi>> mAllLoaiChi;
 
     public LoaiChiRep (Application application){
-        this.loaiChiDao = Database.getDatabase(application).loaiChiDao();
-        mAllLoaiChi = loaiChiDao.findall();
+        this.mloaiChiDao = Database.getDatabase(application).loaiChiDao();
+        mAllLoaiChi = mloaiChiDao.findall();
     }
     public LiveData<List<LoaiChi>> getmAllLoaiChi() {
         return mAllLoaiChi;
     }
     public void delete(LoaiChi loaiChi){
-        new DeleteAsyncTask(loaiChiDao).execute(loaiChi);
+        new DeleteAsyncTask(mloaiChiDao).execute(loaiChi);
     }
     public void update(LoaiChi loaiChi){
-        new UpdateAsyncTask(loaiChiDao).execute(loaiChi);
+        new UpdateAsyncTask(mloaiChiDao).execute(loaiChi);
     }
 
     public void insert2(LoaiChi loaiChi){
-        new InsertAsyncTask2(loaiChiDao).execute(loaiChi);
+        new InsertAsyncTask2(mloaiChiDao).execute(loaiChi);
     }
     class InsertAsyncTask2 extends AsyncTask<LoaiChi,Void,Void>{
         private LoaiChiDao mLoaichidao;

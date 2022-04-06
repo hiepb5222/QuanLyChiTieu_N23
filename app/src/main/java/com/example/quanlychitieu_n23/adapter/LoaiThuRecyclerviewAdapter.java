@@ -23,6 +23,8 @@ public class LoaiThuRecyclerviewAdapter extends RecyclerView.Adapter<LoaiThuRecy
     public static ItemClickListener itemEditClickListener;
     public static ItemClickListener itemViewClickListener;
 
+
+
     public LoaiThuRecyclerviewAdapter(Context context) {
         mLayoutInflater=LayoutInflater.from(context);
     }

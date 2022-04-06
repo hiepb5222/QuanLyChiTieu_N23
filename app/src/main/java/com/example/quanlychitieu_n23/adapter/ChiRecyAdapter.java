@@ -12,45 +12,46 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.quanlychitieu_n23.Entity.LoaiChi;
+import com.example.quanlychitieu_n23.Entity.Chi;
 import com.example.quanlychitieu_n23.R;
 
 import java.util.List;
 
-public class LoaiChiRecyAdapter extends RecyclerView.Adapter<LoaiChiRecyAdapter.LoaiChiViewHolder>{
+public class ChiRecyAdapter extends RecyclerView.Adapter<ChiRecyAdapter.ChiViewHolder>{
     private LayoutInflater minflater;
-    private List<LoaiChi> mlistchi;
+    private List<Chi> mlistchi;
 
     public static ItemClickListener itemClickListener;
     public static ItemClickListener itemViewListener;
 
 
 
-    public LoaiChiRecyAdapter(Context context){
+    public ChiRecyAdapter(Context context){
 
         minflater = LayoutInflater.from(context);
     }
 
     public void setOnItemClickListener(ItemClickListener itemClickListener) {
-        LoaiChiRecyAdapter.itemClickListener = itemClickListener;
+        ChiRecyAdapter.itemClickListener = itemClickListener;
     }
 
     public void setOnItemViewListener(ItemClickListener itemViewListener) {
-        LoaiChiRecyAdapter.itemViewListener = itemViewListener;
+        ChiRecyAdapter.itemViewListener = itemViewListener;
     }
 
     @NonNull
     @Override
-    public LoaiChiViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = minflater.inflate(R.layout.recyclerview_chi_item, parent,false);
-        return new LoaiChiViewHolder(view);
+    public ChiViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = minflater.inflate(R.layout.recyclerview_khoan_chi_item,parent,false);
+        return new ChiViewHolder(view);
     }
 
     @SuppressLint("RecyclerView")
     @Override
-    public void onBindViewHolder(@NonNull LoaiChiViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ChiViewHolder holder, int position) {
         if (mlistchi != null){
-            holder.tvName2.setText(mlistchi.get(position).tenLoaiChi);
+            holder.tvName2.setText(mlistchi.get(position).ten);
+            holder.tvAmount.setText(""+mlistchi.get(position).soTien+" Dong");
             holder.pos = position;
         }
     }
@@ -61,28 +62,30 @@ public class LoaiChiRecyAdapter extends RecyclerView.Adapter<LoaiChiRecyAdapter.
         return 0;
         return mlistchi.size();
     }
-    public LoaiChi getItem(int postision){
+    public Chi getItem(int postision){
         if(mlistchi==null || postision>= mlistchi.size()){
             return null;
         }
         return mlistchi.get(postision);
     }
 
-    public void setlistchi(List<LoaiChi> mlistchi) {
+    public void setlistchi(List<Chi> mlistchi) {
         this.mlistchi = mlistchi;
         notifyDataSetChanged();
     }
 
-    public static class LoaiChiViewHolder extends RecyclerView.ViewHolder{
-        public TextView tvName2;
+    public static class ChiViewHolder extends RecyclerView.ViewHolder{
+        public TextView tvName2,tvAmount;
         public ImageView ivEdit2,ivView2;
         public CardView cv2;
+
         public int pos;
-        public LoaiChiViewHolder(@NonNull View itemView) {
+        public ChiViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvName2= itemView.findViewById(R.id.tvAmount);
+            tvName2= itemView.findViewById(R.id.tvChi);
             ivView2=itemView.findViewById(R.id.ivView2);
             ivEdit2=itemView.findViewById(R.id.ivEdit2);
+            tvAmount = itemView.findViewById(R.id.tvAmount);
             cv2=(CardView) itemView;
             ivView2.setOnClickListener(new View.OnClickListener() {
                 @Override
