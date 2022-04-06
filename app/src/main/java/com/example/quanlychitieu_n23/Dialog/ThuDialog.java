@@ -8,12 +8,18 @@ import android.view.View;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.lifecycle.Observer;
+
+import com.example.quanlychitieu_n23.Entity.LoaiThu;
 import com.example.quanlychitieu_n23.Entity.Thu;
 import com.example.quanlychitieu_n23.R;
+import com.example.quanlychitieu_n23.adapter.LoaiThuSpinnerAdapter;
 import com.example.quanlychitieu_n23.ui.Thu.KhoanThuFragment;
 import com.example.quanlychitieu_n23.ui.Thu.KhoanThuViewModel;
 import com.example.quanlychitieu_n23.ui.Thu.ThuFragment;
 import com.google.android.material.textfield.TextInputEditText;
+
+import java.util.List;
 
 public class ThuDialog {
     private KhoanThuViewModel mViewModel;
@@ -23,6 +29,7 @@ public class ThuDialog {
     private TextInputEditText etId,etName,etAmount,etNote;
     private Spinner spType;
     private boolean mEditmode;
+    private LoaiThuSpinnerAdapter mAdapter;
 
     public ThuDialog(final Context context, KhoanThuFragment fragment, Thu ... Thu) {
         mViewModel = fragment.getViewModel();
@@ -32,7 +39,16 @@ public class ThuDialog {
         etName=view.findViewById(R.id.etName);
         etAmount=view.findViewById(R.id.etAmount);
         etNote=view.findViewById(R.id.etNote);
+        spType=view.findViewById(R.id.spType);
+        mAdapter=new LoaiThuSpinnerAdapter(fragment.getActivity());
 
+        mViewModel.getAllLoaiThu().observe(fragment.getActivity(), new Observer<List<LoaiThu>>() {
+            @Override
+            public void onChanged(List<LoaiThu>loaiThus) {
+                mAdapter.setList(loaiThus);
+            }
+        });
+        spType.setAdapter(mAdapter);
         if(Thu != null&& Thu.length>0) {
             etId.setText(""+Thu[0].tid);
             etName.setText(Thu[0].ten);
@@ -56,6 +72,9 @@ public class ThuDialog {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Thu lt=new Thu();
                         lt.ten=etName.getText().toString();
+                        lt.sotien=Float.parseFloat(etAmount.getText().toString());
+                        lt.ghichu=etNote.getText().toString();
+                        lt.ltid=((LoaiThu) mAdapter.getItem(spType.getSelectedItemPosition())).lid;
                         if (mEditmode) {
                             lt.tid=Integer.parseInt(etId.getText().toString());
                             mViewModel.update(lt);

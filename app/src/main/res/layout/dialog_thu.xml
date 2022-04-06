@@ -39,8 +39,7 @@
         android:id="@+id/spType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
