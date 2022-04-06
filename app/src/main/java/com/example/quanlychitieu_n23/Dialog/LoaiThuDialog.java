@@ -21,12 +21,20 @@ public class LoaiThuDialog {
     private TextInputEditText etId,etName;
     private boolean mEditmode;
 
-    public LoaiThuDialog(final Context context, LoaiThuFragment fragment) {
+    public LoaiThuDialog(final Context context, LoaiThuFragment fragment,LoaiThu ... loaiThu) {
         mViewModel = fragment.getViewModel();
         mLayoutInflater = LayoutInflater.from(context);
         View view=mLayoutInflater.inflate(R.layout.dialog_loai_thu,null);
         etId= view.findViewById(R.id.etid);
         etName=view.findViewById(R.id.etName);
+        if(loaiThu != null&& loaiThu.length>0) {
+            etId.setText(""+loaiThu[0].lid);
+            etName.setText(loaiThu[0].ten);
+            mEditmode=true;
+        }
+        else {
+            mEditmode=false;
+        }
         AlertDialog.Builder builder = new AlertDialog.Builder(context)
                 .setView(view)
                 .setNegativeButton("Dong", new DialogInterface.OnClickListener() {
@@ -40,8 +48,15 @@ public class LoaiThuDialog {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         LoaiThu lt=new LoaiThu();
                         lt.ten=etName.getText().toString();
-                        mViewModel.insert(lt);
-                        Toast.makeText(context, "Loai Thu duoc luu", Toast.LENGTH_SHORT).show();
+                        if (mEditmode) {
+                            lt.lid=Integer.parseInt(etId.getText().toString());
+                            mViewModel.update(lt);
+                        }
+                        else {
+                            mViewModel.insert(lt);
+                            Toast.makeText(context, "Loai Thu duoc luu", Toast.LENGTH_SHORT).show();
+                        }
+
                     }
                 });
                 mDialog=builder.create();

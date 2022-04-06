@@ -17,8 +17,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.quanlychitieu_n23.Dialog.LoaiThuDialog;
 import com.example.quanlychitieu_n23.Entity.LoaiThu;
 import com.example.quanlychitieu_n23.R;
+import com.example.quanlychitieu_n23.adapter.ItemClickListener;
 import com.example.quanlychitieu_n23.adapter.LoaiThuRecyclerviewAdapter;
 
 import java.util.List;
@@ -50,6 +52,15 @@ public class LoaiThuFragment extends Fragment {
         mAdapter=new LoaiThuRecyclerviewAdapter(getActivity());
         mRv.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRv.setAdapter(mAdapter);
+       final LoaiThuFragment currentFragment=this;
+        mAdapter.setOnItemEditClickListener(new ItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+               LoaiThu loaiThu=mAdapter.getItem(position);
+                LoaiThuDialog dialog=new LoaiThuDialog(getActivity(),currentFragment,loaiThu);
+                dialog.show();
+            }
+        });
 
         ItemTouchHelper helper=new ItemTouchHelper(
                 new ItemTouchHelper.SimpleCallback(0,

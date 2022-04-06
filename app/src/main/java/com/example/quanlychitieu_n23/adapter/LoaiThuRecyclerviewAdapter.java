@@ -19,8 +19,20 @@ import java.util.List;
 public class LoaiThuRecyclerviewAdapter extends RecyclerView.Adapter<LoaiThuRecyclerviewAdapter.LoaiThuViewHolder> {
     private LayoutInflater mLayoutInflater;
     private List<LoaiThu> mList;
+
+    public static ItemClickListener itemEditClickListener;
+    public static ItemClickListener itemViewClickListener;
+
     public LoaiThuRecyclerviewAdapter(Context context) {
         mLayoutInflater=LayoutInflater.from(context);
+    }
+
+    public void setOnItemEditClickListener(ItemClickListener itemEditClickListener) {
+        LoaiThuRecyclerviewAdapter.itemEditClickListener = itemEditClickListener;
+    }
+
+    public void setOnItemViewClickListener(ItemClickListener itemViewClickListener) {
+        LoaiThuRecyclerviewAdapter.itemViewClickListener = itemViewClickListener;
     }
 
     @NonNull
@@ -35,6 +47,7 @@ public class LoaiThuRecyclerviewAdapter extends RecyclerView.Adapter<LoaiThuRecy
     if(mList !=null)
     {
         holder.tvName.setText(mList.get(position).ten);
+        holder.position=position;
     }
     }
 
@@ -61,12 +74,30 @@ public class LoaiThuRecyclerviewAdapter extends RecyclerView.Adapter<LoaiThuRecy
         public TextView tvName;
         public ImageView ivEdit,ivView;
         public CardView cv;
+        public int position;
         public LoaiThuViewHolder(@NonNull View itemView) {
             super(itemView);
             tvName= itemView.findViewById(R.id.tvName);
             ivView=itemView.findViewById(R.id.ivView);
             ivEdit=itemView.findViewById(R.id.ivEdit);
             cv=(CardView) itemView;
+
+            ivView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(itemViewClickListener !=null){
+                        itemViewClickListener.onItemClick(position);
+                    }
+                }
+            });
+            ivEdit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(itemEditClickListener !=null){
+                        itemEditClickListener.onItemClick(position);
+                    }
+                }
+            });
         }
     }
 }

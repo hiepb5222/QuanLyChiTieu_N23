@@ -21,6 +21,7 @@ public interface LoaiThuDao {
 
         @Update
         void update(LoaiThu loaiThu);
+
         @Delete
         void delete(LoaiThu loaiThu);
 }
