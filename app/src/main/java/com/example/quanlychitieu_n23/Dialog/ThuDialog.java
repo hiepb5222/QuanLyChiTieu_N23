@@ -39,6 +39,7 @@ public class ThuDialog {
         etName=view.findViewById(R.id.etName);
         etAmount=view.findViewById(R.id.etAmount);
         etNote=view.findViewById(R.id.etNote);
+
         spType=view.findViewById(R.id.spType);
         mAdapter=new LoaiThuSpinnerAdapter(fragment.getActivity());
 
@@ -49,6 +50,7 @@ public class ThuDialog {
             }
         });
         spType.setAdapter(mAdapter);
+
         if(Thu != null&& Thu.length>0) {
             etId.setText(""+Thu[0].tid);
             etName.setText(Thu[0].ten);

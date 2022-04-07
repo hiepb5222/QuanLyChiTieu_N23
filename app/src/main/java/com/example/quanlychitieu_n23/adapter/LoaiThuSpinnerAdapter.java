@@ -57,6 +57,7 @@ public class LoaiThuSpinnerAdapter extends BaseAdapter {
         else {
             holder=(KhoanThuViewHolder) view.getTag();
         }
+        holder.tvName.setText(mList.get(i).ten);
         return view;
     }
     public static class KhoanThuViewHolder{
