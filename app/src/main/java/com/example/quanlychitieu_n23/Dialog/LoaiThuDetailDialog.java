@@ -6,13 +6,11 @@ import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.quanlychitieu_n23.Entity.LoaiThu;
 import com.example.quanlychitieu_n23.R;
 import com.example.quanlychitieu_n23.ui.Thu.LoaiThuFragment;
 import com.example.quanlychitieu_n23.ui.Thu.LoaiThuViewModel;
-import com.google.android.material.textfield.TextInputEditText;
 
 public class LoaiThuDetailDialog {
     private LoaiThuViewModel mViewModel;

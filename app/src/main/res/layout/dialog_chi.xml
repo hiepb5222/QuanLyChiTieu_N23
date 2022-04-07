@@ -28,7 +28,7 @@
         android:layout_margin="5dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etid2"
+            android:id="@+id/etidDia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ma Loai Chi" />
@@ -36,11 +36,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
-        android:id="@+id/spType"
+        android:id="@+id/spType2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -48,7 +48,7 @@
         android:layout_margin="5dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etName2"
+            android:id="@+id/etNamedia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ten Loai Chi" />
@@ -59,7 +59,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etAmount"
+            android:id="@+id/etAmountDia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="So tien" />
@@ -70,7 +70,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etNote"
+            android:id="@+id/etNotedia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ghi Chu"

@@ -1,37 +1,67 @@
 package com.example.quanlychitieu_n23.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.example.quanlychitieu_n23.Entity.Chi;
+import com.example.quanlychitieu_n23.Entity.LoaiChi;
 import com.example.quanlychitieu_n23.R;
 
 import java.util.List;
 
 public class ChiSpinnerAdapter extends BaseAdapter {
-    private List<Chi> mlist;
+
+    private List<LoaiChi> mlist;
     private LayoutInflater mLayoutInf;
+    public ChiSpinnerAdapter(Context context){
+
+        mLayoutInf = LayoutInflater.from(context);
+    }
+
+    public void setlist(List<LoaiChi> mlist) {
+        this.mlist = mlist;
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getCount() {
-        return 0;
+        if (mlist==null){
+            return 0;
+        }
+        return mlist.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        if (mlist == null)
+            return null;
+        return mlist.get(i);
     }
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return i;
     }
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        return null;
+        KhoanChiViewHolder holder;
+        if ((view  == null)){
+            view= mLayoutInf.inflate(R.layout.spinner_chi_item,null,false);
+            holder = new KhoanChiViewHolder(view);
+            view.setTag(holder);
+        }else {
+            holder = (KhoanChiViewHolder) view.getTag();
+        }
+        return view;
     }
     public static class KhoanChiViewHolder {
         public TextView tvName;

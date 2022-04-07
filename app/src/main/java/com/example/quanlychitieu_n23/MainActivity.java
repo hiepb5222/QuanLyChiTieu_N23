@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (fragment instanceof KhoanChiFragment)
                 {
                     ChiDialog dialog = new ChiDialog(currentContext ,(KhoanChiFragment) fragment);
+                    dialog.sshow();
 
                 }else if (fragment instanceof LoaiChiFragment){
                     LoaiChiDialog dialog = new LoaiChiDialog(currentContext, (LoaiChiFragment) fragment);
