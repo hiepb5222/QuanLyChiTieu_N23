@@ -27,8 +27,8 @@ public class ThuDetailDialog {
         mViewModel = fragment.getViewModel();
         mLayoutInflater = LayoutInflater.from(context);
         View view=mLayoutInflater.inflate(R.layout.dialog_detail_khoan_thu,null);
-        tvidThu= view.findViewById(R.id.tvid);
-        tvNamelThu=view.findViewById(R.id.tvName);
+        tvidThu= view.findViewById(R.id.tvidThu);
+        tvNamelThu=view.findViewById(R.id.tvNameLThu);
         tvNameThu=view.findViewById(R.id.tvNameThu);
         tvAmount=view.findViewById(R.id.tvAmount);
         tvGhichu=view.findViewById(R.id.tvghichu);
