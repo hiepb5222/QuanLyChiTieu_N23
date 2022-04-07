@@ -8,7 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.quanlychitieu_n23.Entity.LoaiThu;
-import com.example.quanlychitieu_n23.Entity.Thu;
 import com.example.quanlychitieu_n23.R;
 
 import java.util.List;
