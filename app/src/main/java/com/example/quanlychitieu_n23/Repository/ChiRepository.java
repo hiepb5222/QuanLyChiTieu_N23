@@ -8,6 +8,7 @@ import androidx.lifecycle.LiveData;
 import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Dao.ChiDao;
 import com.example.quanlychitieu_n23.Entity.Chi;
+import com.example.quanlychitieu_n23.Entity.ThongKeLoaiChi;
 
 import java.util.List;
 
@@ -22,6 +23,14 @@ public class ChiRepository {
     public LiveData<List<Chi>> getmAllChi() {
         return mAllChi;
     }
+    public LiveData<Float> sumTongChi() {
+        return mchiDao.sumTongChi();
+    }
+
+    public LiveData<List<ThongKeLoaiChi>> sumbyLoaiChi() {
+        return mchiDao.sumbyLoaiChi();
+    }
+
     public void delete(Chi chi){
         new DeleteAsyncTask(mchiDao).execute(chi);
     }

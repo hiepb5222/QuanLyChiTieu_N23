@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData;
 
 import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Dao.ThuDao;
+import com.example.quanlychitieu_n23.Entity.ThongKeLoaiThu;
 import com.example.quanlychitieu_n23.Entity.Thu;
 
 import java.util.List;
@@ -23,6 +24,16 @@ public class ThuRepository {
     public LiveData<List<Thu>> getAllThu()
     {
         return mAllThu;
+    }
+
+    public LiveData<Float> sumTongThu()
+    {
+        return mThuDao.sumTongThu();
+    }
+
+    public LiveData<List<ThongKeLoaiThu>> sumbyLoaiThu()
+    {
+        return mThuDao.sumbyLoaiThu();
     }
 
     public void insert(Thu thu){

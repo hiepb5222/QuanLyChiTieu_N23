@@ -8,6 +8,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.example.quanlychitieu_n23.Entity.LoaiThu;
+import com.example.quanlychitieu_n23.Entity.ThongKeLoaiThu;
 import com.example.quanlychitieu_n23.Entity.Thu;
 
 import java.util.List;
@@ -16,6 +17,12 @@ import java.util.List;
 public interface ThuDao {
         @Query("Select * from Thu")
         LiveData<List<Thu>> findall();
+
+        @Query("Select sum(sotien) from Thu")
+        LiveData<Float> sumTongThu();
+
+        @Query("Select b.lid,b.ten, sum(a.sotien) as tong from Thu a INNER JOIN loaithu b on a.ltid=b.lid "+" Group by b.lid,b.ten")
+        LiveData<List<ThongKeLoaiThu>> sumbyLoaiThu();
 
         @Insert
         void insert(Thu thu);
