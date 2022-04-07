@@ -8,9 +8,11 @@ import android.view.Menu;
 import com.example.quanlychitieu_n23.Dialog.ChiDialog;
 import com.example.quanlychitieu_n23.Dialog.LoaiChiDialog;
 import com.example.quanlychitieu_n23.Dialog.LoaiThuDialog;
+import com.example.quanlychitieu_n23.Dialog.ThuDialog;
 import com.example.quanlychitieu_n23.ui.Chi.ChiFragment;
 import com.example.quanlychitieu_n23.ui.Chi.KhoanChiFragment;
 import com.example.quanlychitieu_n23.ui.Chi.LoaiChiFragment;
+import com.example.quanlychitieu_n23.ui.Thu.KhoanThuFragment;
 import com.example.quanlychitieu_n23.ui.Thu.LoaiThuFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -62,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
                 }else if (fragment instanceof LoaiChiFragment){
                     LoaiChiDialog dialog = new LoaiChiDialog(currentContext, (LoaiChiFragment) fragment);
                     dialog.sshow();
+                }
+                else if(fragment instanceof KhoanThuFragment)
+                {
+                    ThuDialog dialog=new ThuDialog(currentContext,(KhoanThuFragment) fragment);
+                    dialog.show();
                 }
 
             }
