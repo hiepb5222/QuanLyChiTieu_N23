@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 List<Fragment> fragments =getSupportFragmentManager().getFragments();
                 Fragment fragment=fragments.get(fragments.size()-1);
+
                 if(fragment instanceof LoaiThuFragment){
                    LoaiThuDialog dialog=new LoaiThuDialog(currentContext,
                 (LoaiThuFragment) fragment);

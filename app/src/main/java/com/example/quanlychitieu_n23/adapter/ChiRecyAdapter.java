@@ -37,6 +37,7 @@ public class ChiRecyAdapter extends RecyclerView.Adapter<ChiRecyAdapter.ChiViewH
 
     public void setOnItemViewListener(ItemClickListener itemViewListener) {
         ChiRecyAdapter.itemViewListener = itemViewListener;
+
     }
 
     @NonNull
@@ -51,7 +52,7 @@ public class ChiRecyAdapter extends RecyclerView.Adapter<ChiRecyAdapter.ChiViewH
     public void onBindViewHolder(@NonNull ChiViewHolder holder, int position) {
         if (mlistchi != null){
             holder.tvName2.setText(mlistchi.get(position).ten);
-            holder.tvAmount.setText(""+mlistchi.get(position).soTien+" Dong");
+            holder.tvAmount.setText(""+mlistchi.get(position).soTien+" Đồng");
             holder.pos = position;
         }
     }

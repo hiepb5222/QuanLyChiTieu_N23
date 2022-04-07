@@ -56,6 +56,7 @@ public class ChiSpinnerAdapter extends BaseAdapter {
         }else {
             holder = (KhoanChiViewHolder) view.getTag();
         }
+        holder.tvName.setText(mlist.get(i).tenLoaiChi);
         return view;
     }
     public static class KhoanChiViewHolder {
