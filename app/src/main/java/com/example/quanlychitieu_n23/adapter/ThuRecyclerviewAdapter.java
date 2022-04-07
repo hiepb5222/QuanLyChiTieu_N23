@@ -78,7 +78,7 @@ public class ThuRecyclerviewAdapter extends RecyclerView.Adapter<ThuRecyclerview
         public int position;
         public ThuViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvName= itemView.findViewById(R.id.tvName);
+            tvName= itemView.findViewById(R.id.tvNameLthu);
             tvAmount=itemView.findViewById(R.id.tvAmount);
             ivView=itemView.findViewById(R.id.ivView);
             ivEdit=itemView.findViewById(R.id.ivEdit);

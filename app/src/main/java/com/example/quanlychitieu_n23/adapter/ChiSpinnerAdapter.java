@@ -4,14 +4,9 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-import com.example.quanlychitieu_n23.Entity.Chi;
 import com.example.quanlychitieu_n23.Entity.LoaiChi;
 import com.example.quanlychitieu_n23.R;
 
@@ -66,7 +61,7 @@ public class ChiSpinnerAdapter extends BaseAdapter {
     public static class KhoanChiViewHolder {
         public TextView tvName;
         public  KhoanChiViewHolder(View view){
-            tvName=view.findViewById(R.id.tvName);
+            tvName=view.findViewById(R.id.tvNameLthu);
         }
     }
 }

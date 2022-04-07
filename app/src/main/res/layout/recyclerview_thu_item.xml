@@ -14,7 +14,7 @@
         android:paddingBottom="5dp">
 
         <TextView
-            android:id="@+id/tvName"
+            android:id="@+id/tvNameLthu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -56,7 +56,7 @@
             android:textSize="10sp"
             app:layout_constraintEnd_toStartOf="@+id/ivEdit"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameLthu"
             tools:textStyle="italic" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
