@@ -61,7 +61,7 @@ public class ChiSpinnerAdapter extends BaseAdapter {
     public static class KhoanChiViewHolder {
         public TextView tvName;
         public  KhoanChiViewHolder(View view){
-            tvName=view.findViewById(R.id.tvNameLthu);
+            tvName=view.findViewById(R.id.tvName);
         }
     }
 }

@@ -62,7 +62,7 @@ public class LoaiThuSpinnerAdapter extends BaseAdapter {
     public static class KhoanThuViewHolder{
         public TextView tvName;
         public  KhoanThuViewHolder(View view){
-            tvName=view.findViewById(R.id.tvNameLthu);
+            tvName=view.findViewById(R.id.tvName);
         }
     }
 }

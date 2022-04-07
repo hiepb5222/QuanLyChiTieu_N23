@@ -24,8 +24,8 @@ public class LoaiThuDetailDialog {
         mViewModel = fragment.getViewModel();
         mLayoutInflater = LayoutInflater.from(context);
         View view=mLayoutInflater.inflate(R.layout.dialog_detail_loai_thu,null);
-        tvid= view.findViewById(R.id.tvidthu);
-        tvName=view.findViewById(R.id.tvNameLthu);
+        tvid= view.findViewById(R.id.tvid);
+        tvName=view.findViewById(R.id.tvName);
         tvid.setText(""+loaiThu.lid);
         tvName.setText(loaiThu.ten);
 

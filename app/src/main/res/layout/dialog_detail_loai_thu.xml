@@ -39,7 +39,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/tvidthu"
+                android:id="@+id/tvid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -54,7 +54,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/tvNameLthu"
+                android:id="@+id/tvName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"

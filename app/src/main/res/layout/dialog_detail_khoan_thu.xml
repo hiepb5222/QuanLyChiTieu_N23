@@ -39,11 +39,9 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/tvidthu"
+                android:id="@+id/tvidThu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:textSize="18sp" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -54,11 +52,10 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/tvNameLthu"
+                android:id="@+id/tvNameLThu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:textSize="18sp" />
+                android:text="TextView" />
 
             <TextView
                 android:id="@+id/textView3"
