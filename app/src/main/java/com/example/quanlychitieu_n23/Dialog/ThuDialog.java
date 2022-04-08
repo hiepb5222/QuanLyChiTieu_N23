@@ -76,7 +76,7 @@ public class ThuDialog {
                         lt.ten=etName.getText().toString();
                         lt.sotien=Float.parseFloat(etAmount.getText().toString());
                         lt.ghichu=etNote.getText().toString();
-                        lt.ltid=((LoaiThu) mAdapter.getItem(spType.getSelectedItemPosition())).lid;
+                        lt.ltid=((LoaiThu) mAdapter.getItem(spType.getSelectedItemPosition())).ten;
                         if (mEditmode) {
                             lt.tid=Integer.parseInt(etId.getText().toString());
                             mViewModel.update(lt);

@@ -8,7 +8,7 @@ public class Chi {
     @PrimaryKey(autoGenerate = true)
     public int chiID;
     @ColumnInfo (name = "idChi")
-    public int idChi;
+    public String idChi;
     @ColumnInfo(name = "ten")
     public String ten;
     @ColumnInfo(name = "soTien")

@@ -9,7 +9,7 @@ public class Thu {
     @PrimaryKey(autoGenerate = true)
     public int tid;
     @ColumnInfo(name="ltid")
-    public int ltid;
+    public String ltid;
     @ColumnInfo(name ="ten")
     public String ten;
     @ColumnInfo(name ="sotien")
