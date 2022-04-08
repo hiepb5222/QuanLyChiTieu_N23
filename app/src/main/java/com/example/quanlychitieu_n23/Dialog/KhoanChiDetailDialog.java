@@ -24,7 +24,7 @@ public class KhoanChiDetailDialog {
     private LayoutInflater mLayoutInflater2;
     private AlertDialog mDialog;
 
-    private TextView tvID,tvName;
+    private TextView tvID,tvNamelchi,tvNameChi,tvAmount2,tvGhiChu;
     private boolean mEditmode;
 
     public KhoanChiDetailDialog(final Context context, KhoanChiFragment fragment, Chi chi)
@@ -33,11 +33,17 @@ public class KhoanChiDetailDialog {
         mViewModel22 =fragment.getmViewModel();
         mLayoutInflater2 = LayoutInflater.from(context);
         View view = mLayoutInflater2.inflate(R.layout.dialog_detail_chi,null);
-        tvID =view.findViewById(R.id.tvNameKhoanChi) ;
-        tvName = view.findViewById(R.id.tvSoTien);
+        tvID =view.findViewById(R.id.tvidChi) ;
+        tvNameChi = view.findViewById(R.id.tvNameChi);
+        tvNamelchi = view.findViewById(R.id.tvNameLChi);
+        tvAmount2 = view.findViewById(R.id.tvAmount2);
+        tvGhiChu = view.findViewById(R.id.tvghichu2);
 
-        tvID.setText(""+chi.ten);
-        tvName.setText(""+chi.soTien);
+        tvID.setText(""+chi.chiID);
+        tvNameChi.setText(""+chi.ten);
+        tvNamelchi.setText(""+chi.idChi);
+        tvAmount2.setText(""+chi.soTien);
+        tvGhiChu.setText(""+chi.ghiChu);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context)
                 .setView(view)

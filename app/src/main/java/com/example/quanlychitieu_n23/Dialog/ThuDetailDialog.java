@@ -32,6 +32,7 @@ public class ThuDetailDialog {
         tvNameThu=view.findViewById(R.id.tvNameThu);
         tvAmount=view.findViewById(R.id.tvAmount);
         tvGhichu=view.findViewById(R.id.tvghichu);
+
         tvidThu.setText(""+Thu.tid);
         tvNamelThu.setText(""+Thu.ltid);
         tvNameThu.setText(Thu.ten);
