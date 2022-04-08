@@ -42,7 +42,7 @@ public class LoaiChiRecyAdapter extends RecyclerView.Adapter<LoaiChiRecyAdapter.
     @NonNull
     @Override
     public LoaiChiViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = minflater.inflate(R.layout.recyclerview_chi_item, parent,false);
+        View view = minflater.inflate(R.layout.recyclerview_khoan_chi_item, parent,false);
         return new LoaiChiViewHolder(view);
     }
 
@@ -80,9 +80,9 @@ public class LoaiChiRecyAdapter extends RecyclerView.Adapter<LoaiChiRecyAdapter.
         public int pos;
         public LoaiChiViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvName2= itemView.findViewById(R.id.tvAmount);
-            ivView2=itemView.findViewById(R.id.ivView2);
-            ivEdit2=itemView.findViewById(R.id.ivEdit2);
+            tvName2= itemView.findViewById(R.id.tvName);
+            ivView2=itemView.findViewById(R.id.ivView);
+            ivEdit2=itemView.findViewById(R.id.ivEdit);
             cv2=(CardView) itemView;
             ivView2.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:gravity="center"
-            android:text="Loai Chi"
+            android:text="Loại chi"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -31,7 +31,7 @@
             android:id="@+id/etidDia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ma Loai Chi" />
+            android:hint="Mã loại chi" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
+        android:contentDescription="Chọn Loại Thu"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -50,8 +51,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etNamedia"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
-            android:hint="Ten Loai Chi" />
+            android:hint="Tên Loại chi" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -60,9 +62,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etAmountDia"
+            android:layout_gravity="center"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="So tien" />
+            android:hint="Số tiền" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -73,7 +77,7 @@
             android:id="@+id/etNotedia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ghi Chu"
+            android:hint="Ghi Chú"
             android:inputType="textImeMultiLine" />
     </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>

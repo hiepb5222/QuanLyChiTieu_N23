@@ -2,11 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#75AFDC"
         android:orientation="vertical">
 
         <TextView
@@ -14,8 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:background="#00BCD4"
             android:gravity="center"
-            android:text="Thông tin Loại Thu"
+            android:text="Thông tin Loại Chi"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -33,17 +36,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="Mã loại thu"
-                android:textSize="16sp" />
+                android:text="Mã loại chi"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvIDchi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="TextView"
                 android:textSize="16sp" />
 
             <TextView
@@ -51,8 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="Tên loại thu"
+                android:text="Tên loại chi"
                 android:textSize="16sp" />
 
             <TextView
@@ -60,9 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
         </LinearLayout>
     </ScrollView>
