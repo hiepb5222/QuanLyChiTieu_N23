@@ -36,12 +36,12 @@ public class SignInActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         userDAo.registerUser(userEntity);
-                        new Thread(new Runnable() {
-                            @Override
-                            public void run() {
+//                        new Thread(new Runnable() {
+//                            @Override
+//                            public void run() {
                                 Toast.makeText(getApplicationContext(),"Ok",Toast.LENGTH_SHORT).show();
-                            }
-                        });
+//                            }
+//                        });
 
                     }
                 }).start();
