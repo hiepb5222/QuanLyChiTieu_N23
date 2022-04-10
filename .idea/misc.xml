@@ -45,15 +45,13 @@
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/app_bar_main.xml" value="0.11398176291793313" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/content_main.xml" value="0.13496376811594202" />
-        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_chi.xml" value="0.25416666666666665" />
-        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_detail_chi.xml" value="0.264" />
-        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_detail_khoan_thu.xml" value="0.4" />
-        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_detail_loai_chi.xml" value="0.536" />
-        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_detail_loai_thu.xml" value="0.4" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_detail_khoan_thu.xml" value="0.2" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_detail_loai_chi.xml" value="0.1099290780141844" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_detail_loai_thu.xml" value="0.1099290780141844" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_detail_thu.xml" value="0.12360688956433637" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_loai_chi.xml" value="0.25416666666666665" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_loai_thu.xml" value="0.2513586956521739" />
-        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_thu.xml" value="0.4" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_thu.xml" value="0.1" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/fragment_chi.xml" value="0.192481884057971" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/fragment_gallery.xml" value="0.11398176291793313" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/fragment_gioi_thieu.xml" value="0.11398176291793313" />
@@ -71,18 +69,23 @@
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/recyclerview_chi_item.xml" value="0.253125" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/recyclerview_khoan_chi_item.xml" value="0.1099290780141844" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/recyclerview_loai_thu_item.xml" value="0.264" />
-        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/recyclerview_thongke_loaichi.xml" value="0.4" />
-        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/recyclerview_thu_item.xml" value="0.536" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/recyclerview_thu_item.xml" value="0.264" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/spinner_chi_item.xml" value="0.15443840579710144" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/spinner_thu_item.xml" value="0.1" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/test_fragment.xml" value="0.23854166666666668" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/menu/activity_main_drawer.xml" value="0.264" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/menu/main.xml" value="0.25" />
         <entry key="..\:/QuanLyChiTieu_N23_Test/app/src/main/res/layout/dialog_detail_loai_thu.xml" value="0.1" />
+        <entry key="..\:/QuanLyChiTieu_Nhom23/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1" />
+        <entry key="..\:/QuanLyChiTieu_Nhom23/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/QuanLyChiTieu_Nhom23/app/src/main/res/layout/app_bar_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/QuanLyChiTieu_Nhom23/app/src/main/res/layout/content_main.xml" value="0.23596014492753623" />
+        <entry key="..\:/QuanLyChiTieu_Nhom23/app/src/main/res/layout/dialog_detail_loai_thu.xml" value="0.2" />
         <entry key="..\:/QuanLyChiTieu_Nhom23/app/src/main/res/layout/loai_chi_fragment.xml" value="0.11367753623188406" />
         <entry key="..\:/QuanLyChiTieu_Nhom23/app/src/main/res/layout/loai_thu_fragment.xml" value="0.1644021739130435" />
         <entry key="..\:/QuanLyChiTieu_Nhom23/app/src/main/res/layout/recyclerview_chi_item.xml" value="0.1" />
         <entry key="..\:/QuanLyChiTieu_Nhom23/app/src/main/res/layout/recyclerview_loai_thu_item.xml" value="0.10030395136778116" />
+        <entry key="..\:/QuanLyChiTieu_Nhom23/app/src/main/res/layout/recyclerview_thongke_loaichi.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
