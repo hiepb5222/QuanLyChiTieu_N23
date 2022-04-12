@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:gravity="center"
-            android:text="Loai Chi"
+            android:text="Loại chi"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -30,7 +30,7 @@
             android:id="@+id/etid2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ma Loai Chi" />
+            android:hint="Mã loại chi" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -43,6 +43,6 @@
             android:id="@+id/etName2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ten Loai Chi" />
+            android:hint="Tên loại chi" />
     </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>

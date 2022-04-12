@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:gravity="center"
-            android:text="Loai Thu"
+            android:text="Loại thu"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -30,7 +30,7 @@
             android:id="@+id/etid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ma Loai Thu" />
+            android:hint="Mã loại thu" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -43,6 +43,6 @@
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ten Loai Thu" />
+            android:hint="Tên loại thu" />
     </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>
