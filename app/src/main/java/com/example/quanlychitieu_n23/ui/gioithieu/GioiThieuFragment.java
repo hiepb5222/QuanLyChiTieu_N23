@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 
+import com.example.quanlychitieu_n23.Dialog.AccDialog;
 import com.example.quanlychitieu_n23.Entity.UserEntity;
 import com.example.quanlychitieu_n23.R;
 import com.example.quanlychitieu_n23.adapter.AccRecyclerAdapter;
@@ -58,7 +59,9 @@ public class GioiThieuFragment extends Fragment {
         madapter.setOnItemClickListener(new ItemClickListener() {
             @Override
             public void onItemClick(int position) {
-//
+                UserEntity userEntity = madapter.getItem(position);
+                AccDialog dialog = new AccDialog(getActivity(),gioiThieuFragment,userEntity);
+                dialog.sshow();
             }
         });
         madapter.setOnItemViewListener(new ItemClickListener() {

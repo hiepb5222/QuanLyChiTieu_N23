@@ -12,6 +12,10 @@ import android.widget.Toast;
 import com.example.quanlychitieu_n23.Dao.UserDAo;
 import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Entity.UserEntity;
+import java.lang.Thread;
+import java.lang.Runnable;
+
+
 
 public class LoginActivity extends AppCompatActivity {
     EditText userid,password;
@@ -33,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
                 String useridtext = userid.getText().toString();
                 String passtext = password.getText().toString();
                 if (useridtext.isEmpty() || passtext.isEmpty()){
-                    Toast.makeText(getApplicationContext(),"fill it" ,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Chưa điền đầy đủ" ,Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Database userDatabase = Database.getDatabase(getApplicationContext());

@@ -11,7 +11,8 @@ import android.widget.Toast;
 import com.example.quanlychitieu_n23.Dao.UserDAo;
 import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Entity.UserEntity;
-
+import java.lang.Thread;
+import java.lang.Runnable;
 public class SignInActivity extends AppCompatActivity {
     EditText userid,password;
     Button register;
@@ -36,12 +37,12 @@ public class SignInActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         userDAo.registerUser(userEntity);
-//                        new Thread(new Runnable() {
-//                            @Override
-//                            public void run() {
-                                Toast.makeText(getApplicationContext(),"Ok",Toast.LENGTH_SHORT).show();
-//                            }
-//                        });
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getApplicationContext(),"Thành công",Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
                     }
                 }).start();
