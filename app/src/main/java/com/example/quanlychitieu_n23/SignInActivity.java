@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.quanlychitieu_n23.Dao.UserDAo;
-import com.example.quanlychitieu_n23.Dao.UserDatabase;
+import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Entity.UserEntity;
 
 public class SignInActivity extends AppCompatActivity {
@@ -30,7 +30,7 @@ public class SignInActivity extends AppCompatActivity {
                 UserEntity userEntity = new UserEntity();
                 userEntity.setUserID(userid.getText().toString());
                 userEntity.setPassword(password.getText().toString());
-                UserDatabase userDatabase =UserDatabase.getUserDatabase(getApplicationContext());
+                Database userDatabase =Database.getDatabase(getApplicationContext());
                 UserDAo userDAo = userDatabase.userDAo();
                 new Thread(new Runnable() {
                     @Override

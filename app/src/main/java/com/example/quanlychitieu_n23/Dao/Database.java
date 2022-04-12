@@ -13,14 +13,15 @@ import com.example.quanlychitieu_n23.Entity.Chi;
 import com.example.quanlychitieu_n23.Entity.LoaiChi;
 import com.example.quanlychitieu_n23.Entity.LoaiThu;
 import com.example.quanlychitieu_n23.Entity.Thu;
+import com.example.quanlychitieu_n23.Entity.UserEntity;
 
-@androidx.room.Database(entities = {LoaiThu.class, LoaiChi.class, Thu.class, Chi.class} ,version = 4,exportSchema = false)
+@androidx.room.Database(entities = {UserEntity.class,LoaiThu.class, LoaiChi.class, Thu.class, Chi.class} ,version = 5,exportSchema = false)
 public abstract class Database extends RoomDatabase {
     public abstract LoaiChiDao loaiChiDao();
     public abstract LoaiThuDao loaiThuDao();
     public abstract ThuDao thuDao();
     public abstract ChiDao chiDao();
-
+    public abstract UserDAo userDAo();
 
     public static Database INSTANCE;
     public static RoomDatabase.Callback callback=new Callback() {

@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.quanlychitieu_n23.Dao.UserDAo;
-import com.example.quanlychitieu_n23.Dao.UserDatabase;
+import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Entity.UserEntity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"fill it" ,Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    UserDatabase userDatabase = UserDatabase.getUserDatabase(getApplicationContext());
+                    Database userDatabase = Database.getDatabase(getApplicationContext());
                     UserDAo userDAo = userDatabase.userDAo();
                     new Thread(new Runnable() {
                         @Override
