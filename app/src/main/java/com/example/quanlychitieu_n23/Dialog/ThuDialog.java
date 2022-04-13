@@ -34,6 +34,7 @@ public class ThuDialog {
     public ThuDialog(final Context context, KhoanThuFragment fragment, Thu ... Thu) {
         mViewModel = fragment.getViewModel();
         mLayoutInflater = LayoutInflater.from(context);
+
         View view=mLayoutInflater.inflate(R.layout.dialog_thu,null);
         etId= view.findViewById(R.id.etid);
         etName=view.findViewById(R.id.etName);
@@ -63,13 +64,13 @@ public class ThuDialog {
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(context)
                 .setView(view)
-                .setNegativeButton("Dong", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Đóng", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         mDialog.dismiss();
                     }
                 })
-                .setPositiveButton("Luu", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Lưu", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Thu lt=new Thu();
@@ -78,7 +79,7 @@ public class ThuDialog {
                         lt.ghichu=etNote.getText().toString();
                         lt.ltid=((LoaiThu) mAdapter.getItem(spType.getSelectedItemPosition())).ten;
                         if (mEditmode) {
-                            lt.tid=Integer.parseInt(etId.getText().toString());
+                             lt.tid=Integer.parseInt(etId.getText().toString());
                             mViewModel.update(lt);
                         }
                         else {

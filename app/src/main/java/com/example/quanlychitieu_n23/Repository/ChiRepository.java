@@ -74,7 +74,6 @@ public class ChiRepository {
         {
             this.mChiDao= mchiDao;
         }
-
         @Override
         protected Void doInBackground(Chi... Chis) {
             mChiDao.updateChi(Chis[0]);

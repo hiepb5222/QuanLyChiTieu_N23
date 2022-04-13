@@ -15,7 +15,7 @@ import com.example.quanlychitieu_n23.Entity.LoaiThu;
 import com.example.quanlychitieu_n23.Entity.Thu;
 import com.example.quanlychitieu_n23.Entity.UserEntity;
 
-@androidx.room.Database(entities = {UserEntity.class,LoaiThu.class, LoaiChi.class, Thu.class, Chi.class} ,version = 5,exportSchema = false)
+@androidx.room.Database(entities = {UserEntity.class,LoaiThu.class, LoaiChi.class, Thu.class, Chi.class} ,version = 6,exportSchema = false)
 public abstract class Database extends RoomDatabase {
     public abstract LoaiChiDao loaiChiDao();
     public abstract LoaiThuDao loaiThuDao();

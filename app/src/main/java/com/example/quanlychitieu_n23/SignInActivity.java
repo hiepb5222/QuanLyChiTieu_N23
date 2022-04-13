@@ -2,6 +2,7 @@ package com.example.quanlychitieu_n23;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Entity.UserEntity;
 import java.lang.Thread;
 import java.lang.Runnable;
+
 public class SignInActivity extends AppCompatActivity {
     EditText userid,password;
     Button register;
@@ -33,21 +35,16 @@ public class SignInActivity extends AppCompatActivity {
                 userEntity.setPassword(password.getText().toString());
                 Database userDatabase =Database.getDatabase(getApplicationContext());
                 UserDAo userDAo = userDatabase.userDAo();
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        userDAo.registerUser(userEntity);
-                        new Thread(new Runnable() {
-                            @Override
-                            public void run() {
-                                Toast.makeText(getApplicationContext(),"Thành công",Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
-                    }
-                }).start();
+//                new Thread(() -> {
+                    userDAo.registerUser(userEntity);
+//                    new Thread(() ->
+                    Toast.makeText(getApplicationContext(),"Thành công",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(SignInActivity.this,LoginActivity.class);
+                    startActivity(intent);
+//                }).start();
 
             }
         });
+
     }
 }

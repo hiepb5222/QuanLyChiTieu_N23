@@ -1,5 +1,6 @@
 package com.example.quanlychitieu_n23.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +43,7 @@ public class ThuRecyclerviewAdapter extends RecyclerView.Adapter<ThuRecyclerview
         return new ThuViewHolder(view);
     }
 
+    @SuppressLint("RecyclerView")
     @Override
     public void onBindViewHolder(@NonNull ThuViewHolder holder, int position) {
     if(mList !=null)

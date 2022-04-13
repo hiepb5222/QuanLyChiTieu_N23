@@ -30,7 +30,7 @@ public class KhoanChiDetailDialog {
     public KhoanChiDetailDialog(final Context context, KhoanChiFragment fragment, Chi chi)
     {
 
-        mViewModel22 =fragment.getmViewModel();
+        mViewModel22 =fragment.getViewModel();
         mLayoutInflater2 = LayoutInflater.from(context);
         View view = mLayoutInflater2.inflate(R.layout.dialog_detail_chi,null);
         tvID =view.findViewById(R.id.tvidChi) ;

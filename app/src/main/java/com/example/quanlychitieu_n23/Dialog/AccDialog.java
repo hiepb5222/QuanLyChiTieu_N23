@@ -6,23 +6,13 @@ import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.lifecycle.Observer;
-
-import com.example.quanlychitieu_n23.Entity.Chi;
-import com.example.quanlychitieu_n23.Entity.LoaiChi;
 import com.example.quanlychitieu_n23.Entity.UserEntity;
 import com.example.quanlychitieu_n23.R;
-import com.example.quanlychitieu_n23.adapter.ChiSpinnerAdapter;
-import com.example.quanlychitieu_n23.ui.Chi.KhoanChiFragment;
 import com.example.quanlychitieu_n23.ui.gioithieu.AccoutViewModel;
-import com.example.quanlychitieu_n23.ui.gioithieu.GioiThieuFragment;
-import com.google.android.material.textfield.TextInputEditText;
-
-import java.util.List;
+import com.example.quanlychitieu_n23.ui.gioithieu.AccoutFragment;
 
 public class AccDialog {
     private AccoutViewModel viewModel;
@@ -34,7 +24,7 @@ public class AccDialog {
     private TextView etNameAcc;
     private boolean mEditmode;
 
-    public AccDialog(final Context context, GioiThieuFragment fragment, UserEntity... userEntities) {
+    public AccDialog(final Context context, AccoutFragment fragment, UserEntity... userEntities) {
         viewModel = fragment.getMviewModel();
         mLayoutInflater = LayoutInflater.from(context);
 

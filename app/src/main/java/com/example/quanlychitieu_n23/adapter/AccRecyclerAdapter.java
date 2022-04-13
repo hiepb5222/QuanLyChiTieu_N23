@@ -34,10 +34,6 @@ public class AccRecyclerAdapter extends RecyclerView.Adapter<AccRecyclerAdapter.
         AccRecyclerAdapter.itemClickListener = itemClickListener;
     }
 
-    public void setOnItemViewListener(ItemClickListener itemViewListener) {
-        AccRecyclerAdapter.itemViewListener = itemViewListener;
-
-    }
 
 
     @NonNull
@@ -81,18 +77,17 @@ public class AccRecyclerAdapter extends RecyclerView.Adapter<AccRecyclerAdapter.
         public AccViewHolder(@NonNull View itemView) {
             super(itemView);
             tvNameAcc = itemView.findViewById(R.id.tvNameAcc);
-            ivView = itemView.findViewById(R.id.ivView);
-            ivEdit = itemView.findViewById(R.id.ivEdit);
+                        ivEdit = itemView.findViewById(R.id.ivEdit);
 
             cv2 = (CardView) itemView;
-            ivView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (itemViewListener != null) {
-                        itemViewListener.onItemClick(pos);
-                    }
-                }
-            });
+//            ivView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    if (itemViewListener != null) {
+//                        itemViewListener.onItemClick(pos);
+//                    }
+//                }
+//            });
             ivEdit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

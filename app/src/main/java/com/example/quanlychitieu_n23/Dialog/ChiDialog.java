@@ -33,7 +33,7 @@ public class ChiDialog {
     public ChiDialog(final Context context, KhoanChiFragment fragment, Chi ... chi)
     {
 
-        mViewModel2 =fragment.getmViewModel();
+        mViewModel2 =fragment.getViewModel();
         mLayoutInflater2 = LayoutInflater.from(context);
 
         View view = mLayoutInflater2.inflate(R.layout.dialog_chi,null);
@@ -55,11 +55,10 @@ public class ChiDialog {
 
 
         if(chi != null && chi.length>0){
-            etId2.setText(""+chi[0].idChi);
+            etId2.setText(""+chi[0].chiID);
             etName2.setText(chi[0].ten);
             etAmount.setText(""+chi[0].soTien);
             etNote.setText(chi[0].ghiChu);
-
             mEditmode=true;
         }
         else{

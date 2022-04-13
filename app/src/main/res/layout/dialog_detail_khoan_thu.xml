@@ -41,7 +41,8 @@
             <TextView
                 android:id="@+id/tvidThu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
 
             <TextView
                 android:id="@+id/textView7"
@@ -54,37 +55,43 @@
             <TextView
                 android:id="@+id/tvNameLThu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tên khoản thu"
+                android:textSize="18sp"
                 android:layout_margin="5dp"/>
 
             <TextView
                 android:id="@+id/tvNameThu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Số tiền"
+                android:textSize="18sp"
                 android:layout_margin="5dp"/>
 
             <TextView
                 android:id="@+id/tvAmount"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ghi chú"
+                android:textSize="18sp"
                 android:layout_margin="5dp"/>
 
             <TextView

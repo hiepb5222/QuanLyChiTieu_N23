@@ -20,6 +20,7 @@ public class KhoanThuViewModel extends AndroidViewModel {
     private LiveData<List<Thu>> mAllThu;
     private LoaiThuRepository mLoaiThuRepository;
     private LiveData<List<LoaiThu>>mAllLoaiThu;
+
     public KhoanThuViewModel(@NonNull Application application) {
         super(application);
         mThuRepository= new ThuRepository(application);

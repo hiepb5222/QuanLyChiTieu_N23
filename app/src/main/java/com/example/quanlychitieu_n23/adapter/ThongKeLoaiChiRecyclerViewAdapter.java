@@ -15,13 +15,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class ThongKeLoaiChiRecyclerViewAdapter extends RecyclerView.Adapter<ThongKeLoaiChiRecyclerViewAdapter.ThongKeLoaiChiViewHolder> {
+public class ThongKeLoaiChiRecyclerViewAdapter
+        extends RecyclerView.Adapter<ThongKeLoaiChiRecyclerViewAdapter.ThongKeLoaiChiViewHolder> {
     private LayoutInflater mLayoutInflater;
     private List<ThongKeLoaiChi> mList;
     public ThongKeLoaiChiRecyclerViewAdapter(Context context) {
         mLayoutInflater=LayoutInflater.from(context);
     }
-
     @NonNull
     @Override
     public ThongKeLoaiChiViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -32,10 +32,10 @@ public class ThongKeLoaiChiRecyclerViewAdapter extends RecyclerView.Adapter<Thon
     @Override
     public void onBindViewHolder(@NonNull ThongKeLoaiChiViewHolder holder, int position) {
     if(mList!= null)
-    {
-        holder.tvTenLoaiChi.setText(mList.get(position).ten);
-        holder.etTongLoaiChi.setText(""+mList.get(position).tong);
-    }
+        {
+            holder.tvTenLoaiChi.setText(mList.get(position).ten);
+            holder.etTongLoaiChi.setText(""+mList.get(position).tong);
+        }
     }
 
     @Override
@@ -44,7 +44,7 @@ public class ThongKeLoaiChiRecyclerViewAdapter extends RecyclerView.Adapter<Thon
         return 0;
         return mList.size();
     }
-    public void setmList(List<ThongKeLoaiChi>list){
+    public void setList(List<ThongKeLoaiChi>list){
         this.mList=list;
         notifyDataSetChanged();
     }

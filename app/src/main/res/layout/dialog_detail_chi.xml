@@ -41,7 +41,7 @@
             <TextView
                 android:id="@+id/tvidChi"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" android:layout_margin="5dp"/>
 
             <TextView
                 android:id="@+id/textView7"
@@ -54,19 +54,22 @@
             <TextView
                 android:id="@+id/tvNameLChi"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tên khoản chi"
+                android:textSize="18sp"
                 android:layout_margin="5dp"/>
 
             <TextView
                 android:id="@+id/tvNameChi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 />
 
             <TextView
@@ -74,12 +77,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:textSize="18sp"
                 android:text="Số Tiền" />
 
             <TextView
                 android:id="@+id/tvAmount2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 />
 
             <TextView
@@ -87,13 +92,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ghi Chú"
+                android:textSize="18sp"
                 android:layout_margin="5dp"
                 />
 
             <TextView
                 android:id="@+id/tvghichu2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
         </LinearLayout>
     </ScrollView>
 

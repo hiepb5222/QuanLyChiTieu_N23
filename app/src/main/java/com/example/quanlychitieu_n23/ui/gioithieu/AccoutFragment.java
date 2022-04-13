@@ -28,15 +28,15 @@ import com.example.quanlychitieu_n23.adapter.ItemClickListener;
 import java.util.List;
 
 
-public class GioiThieuFragment extends Fragment {
+public class AccoutFragment extends Fragment {
     private RecyclerView mRv;
     private AccRecyclerAdapter madapter;
     private AccoutViewModel mviewModel;
 
 
 
-    public static GioiThieuFragment newInstance() {
-        return new GioiThieuFragment();
+    public static AccoutFragment newInstance() {
+        return new AccoutFragment();
     }
     public AccoutViewModel getMviewModel() {return mviewModel;}
 
@@ -55,21 +55,16 @@ public class GioiThieuFragment extends Fragment {
         mRv.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRv.setAdapter(madapter);
 
-        final GioiThieuFragment gioiThieuFragment = this;
+        final AccoutFragment accoutFragment = this;
         madapter.setOnItemClickListener(new ItemClickListener() {
             @Override
             public void onItemClick(int position) {
                 UserEntity userEntity = madapter.getItem(position);
-                AccDialog dialog = new AccDialog(getActivity(),gioiThieuFragment,userEntity);
+                AccDialog dialog = new AccDialog(getActivity(), accoutFragment,userEntity);
                 dialog.sshow();
             }
         });
-        madapter.setOnItemViewListener(new ItemClickListener() {
-            @Override
-            public void onItemClick(int position) {
-
-            }
-        });
+       
         ItemTouchHelper helper=new ItemTouchHelper(
                 new ItemTouchHelper.SimpleCallback(0,
                         ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT
@@ -83,9 +78,10 @@ public class GioiThieuFragment extends Fragment {
                     public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                         int position =viewHolder.getAdapterPosition();
                         UserEntity lt=madapter.getItem(position);
-
+                        mviewModel.delete(lt);
                         Toast.makeText(getActivity(),"Tài khoản đã được xóa",Toast.LENGTH_SHORT).show();
-                        mviewModel.delete(lt);                    }
+
+                    }
                 }
         );
         helper.attachToRecyclerView(mRv);

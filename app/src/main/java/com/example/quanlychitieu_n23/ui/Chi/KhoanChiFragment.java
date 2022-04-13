@@ -40,7 +40,7 @@ public class KhoanChiFragment extends Fragment {
         return new KhoanChiFragment();
     }
 
-    public KhoanChiViewModel getmViewModel() {
+    public KhoanChiViewModel getViewModel() {
         return mViewModel;
     }
 

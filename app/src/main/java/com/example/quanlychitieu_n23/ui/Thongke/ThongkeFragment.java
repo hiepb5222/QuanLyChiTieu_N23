@@ -88,7 +88,7 @@ public class ThongkeFragment extends Fragment {
         mThongKeViewModel.getThongKeLoaiChis().observe(getActivity(), new Observer<List<ThongKeLoaiChi>>() {
             @Override
             public void onChanged(List<ThongKeLoaiChi> thongKeLoaiChis) {
-                mThongKeLoaiChiAdapter.setmList(thongKeLoaiChis);
+                mThongKeLoaiChiAdapter.setList(thongKeLoaiChis);
             }
         });
         mThongKeViewModel.getThongKeLoaiThus().observe(getActivity(), new Observer<List<ThongKeLoaiThu>>() {
