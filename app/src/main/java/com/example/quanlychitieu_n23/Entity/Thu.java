@@ -16,4 +16,6 @@ public class Thu {
     public float sotien;
     @ColumnInfo(name ="ghichu")
     public String ghichu;
+    @ColumnInfo(name="Date")
+    public String date;
 }

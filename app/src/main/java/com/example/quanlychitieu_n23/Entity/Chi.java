@@ -15,4 +15,6 @@ public class Chi {
     public float soTien;
     @ColumnInfo(name = "ghiChu")
     public String ghiChu;
+    @ColumnInfo(name="Date")
+    public String date;
 }
