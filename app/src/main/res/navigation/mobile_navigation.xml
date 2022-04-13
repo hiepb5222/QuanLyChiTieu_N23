@@ -25,17 +25,17 @@
     <fragment
         android:id="@+id/nav_chi"
         android:name="com.example.quanlychitieu_n23.ui.Chi.ChiFragment"
-        android:label="fragment_chi"
+        android:label="Khoản chi"
         tools:layout="@layout/fragment_chi" />
     <fragment
         android:id="@+id/nav_gioithieu"
         android:name="com.example.quanlychitieu_n23.ui.TaiKhoan.AccoutFragment"
-        android:label="fragment_gioi_thieu"
+        android:label="Tài khoản"
         tools:layout="@layout/fragment_gioi_thieu" />
     <fragment
         android:id="@+id/nav_thongke"
         android:name="com.example.quanlychitieu_n23.ui.Thongke.ThongkeFragment"
-        android:label="fragment_thongke"
+        android:label="Thống kê"
         tools:layout="@layout/fragment_thongke" />
     <fragment
         android:id="@+id/nav_thoat"
@@ -44,6 +44,6 @@
     <fragment
         android:id="@+id/nav_thu"
         android:name="com.example.quanlychitieu_n23.ui.Thu.ThuFragment"
-        android:label="fragment_thu"
+        android:label="Khoản thu"
         tools:layout="@layout/fragment_thu" />
 </navigation>
