@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 import com.example.quanlychitieu_n23.Entity.UserEntity;
 import com.example.quanlychitieu_n23.R;
-import com.example.quanlychitieu_n23.ui.gioithieu.AccoutViewModel;
-import com.example.quanlychitieu_n23.ui.gioithieu.AccoutFragment;
+import com.example.quanlychitieu_n23.ui.TaiKhoan.AccoutViewModel;
+import com.example.quanlychitieu_n23.ui.TaiKhoan.AccoutFragment;
 
 public class AccDialog {
     private AccoutViewModel viewModel;

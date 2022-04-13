@@ -21,11 +21,6 @@ import com.example.quanlychitieu_n23.adapter.ThongKeLoaiThuRecyclerViewAdapter;
 
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ThongkeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class ThongkeFragment extends Fragment {
     private ThongKeViewModel mThongKeViewModel;
     private EditText mEtTongThu,mEtTongChi;

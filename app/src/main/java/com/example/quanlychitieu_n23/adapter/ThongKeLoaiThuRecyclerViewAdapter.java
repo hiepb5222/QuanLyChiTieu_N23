@@ -56,7 +56,6 @@ public class ThongKeLoaiThuRecyclerViewAdapter
         public EditText etTongLoaiThu;
         public ThongKeLoaiThuViewHolder(@NonNull View itemView) {
             super(itemView);
-
             tvTenLoaiThu=itemView.findViewById(R.id.tvTenLoaiThu);
             etTongLoaiThu=itemView.findViewById(R.id.etTongloaiThu);
         }

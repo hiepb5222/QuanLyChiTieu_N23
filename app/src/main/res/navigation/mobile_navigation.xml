@@ -29,7 +29,7 @@
         tools:layout="@layout/fragment_chi" />
     <fragment
         android:id="@+id/nav_gioithieu"
-        android:name="com.example.quanlychitieu_n23.ui.gioithieu.AccoutFragment"
+        android:name="com.example.quanlychitieu_n23.ui.TaiKhoan.AccoutFragment"
         android:label="fragment_gioi_thieu"
         tools:layout="@layout/fragment_gioi_thieu" />
     <fragment
