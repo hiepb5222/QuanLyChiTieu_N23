@@ -21,6 +21,9 @@ public interface ThuDao {
         @Query("Select sum(sotien) from Thu")
         LiveData<Float> sumTongThu();
 
+        @Query("Select sum(sotien) from Thu")
+        Float sumTongThu1();
+
         @Query("Select b.lid,b.ten, sum(a.sotien) as tong from Thu a INNER JOIN loaithu b on a.tid=b.lid "+" Group by b.lid,b.ten")
         LiveData<List<ThongKeLoaiThu>> sumbyLoaiThu();
 

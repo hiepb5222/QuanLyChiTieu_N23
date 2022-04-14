@@ -12,4 +12,9 @@
     <string name="menu_slideshow">Slideshow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loiich1">Bạn cần ghi lại các khoản chi tiêu hàng ngày: Ăn uống, đi chợ, con cái, hiếu hỉ… Sổ Thu Chi này sẽ giúp bạn quản lý việc này qua các ghi chép thu, chi theo từng hạng mục cụ thể.</string>
+    <string name="loiich2">Bạn muốn có cái nhìn tổng quan nhất về tình hình tài chính, thu chi, công nợ… từ các ghi chép hàng ngày. Hệ thống báo cáo sẽ cung cấp đầy đủ số liệu, từ đó giúp bạn đưa ra được những thay đổi nhanh chóng, kịp thời.</string>
+
+
+
 </resources>
