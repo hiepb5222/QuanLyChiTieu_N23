@@ -13,6 +13,7 @@ import com.example.quanlychitieu_n23.Dao.UserDAo;
 import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Entity.UserEntity;
 import com.example.quanlychitieu_n23.ui.home.HomeFragment;
+import java.lang.Runnable;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -51,14 +52,32 @@ public class LoginActivity extends AppCompatActivity {
                                     public void run() {
                                         Toast.makeText(getApplicationContext(),"II",Toast.LENGTH_SHORT).show();
                                     }
-
                                 });
-                            }else{
+                            }else
+                            {
                                 Intent intent= new Intent(LoginActivity.this,MainActivity.class);
                                 startActivity(intent);
                             }
                         }
                     }).start();
+//                    new Thread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            UserEntity userEntity = userDAo.login(useridtext,passtext);
+//                            if(userEntity == null){
+//                                runOnUiThread(new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        Toast.makeText(getApplicationContext(),"II",Toast.LENGTH_SHORT).show();
+//                                    }
+//
+//                                });
+//                            }else{
+//                                Intent intent= new Intent(LoginActivity.this,MainActivity.class);
+//                                startActivity(intent);
+//                            }
+//                        }
+//                    }).start();
 
                 }
             }

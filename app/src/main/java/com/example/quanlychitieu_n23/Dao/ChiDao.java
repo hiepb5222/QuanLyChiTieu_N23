@@ -25,6 +25,9 @@ public interface ChiDao {
     @Query("Select sum(soTien) from Chi")
     Float sumTongChi1();
 
+    @Query("SELECT EXISTS (SELECT * FROM chi)")
+    Boolean IssumTongChi1null();
+
     @Query("Select b.idChi,b.ten, sum(a.sotien) as tong from Chi a INNER JOIN loaichi b on a.chiID=b.idChi "+" Group by b.idChi,b.ten")
     LiveData<List<ThongKeLoaiChi>> sumbyLoaiChi();
 
