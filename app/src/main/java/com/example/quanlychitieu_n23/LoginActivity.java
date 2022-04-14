@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Toast.makeText(getApplicationContext(),"II",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(),"Chưa có tài khoản này",Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }else
