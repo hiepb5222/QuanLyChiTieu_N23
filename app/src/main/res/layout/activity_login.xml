@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".SignInActivity">
 
     <TextView
@@ -22,17 +23,7 @@
         android:layout_height="182dp"
         android:layout_gravity="center"
         android:layout_margin="15dp"
-        tools:srcCompat="@drawable/money"
-        android:scaleType="fitXY"/>
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:gravity="center"
-        android:text="Vui lòng đăng nhập tại đây !"
-        android:textSize="20sp" />
+        android:background="@drawable/backggroud" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress1"
