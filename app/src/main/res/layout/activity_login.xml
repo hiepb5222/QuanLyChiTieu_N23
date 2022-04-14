@@ -23,7 +23,7 @@
         android:layout_height="182dp"
         android:layout_gravity="center"
         android:layout_margin="15dp"
-        tools:srcCompat="@drawable/backggroud" />
+        android:background="@drawable/backggroud" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress1"
