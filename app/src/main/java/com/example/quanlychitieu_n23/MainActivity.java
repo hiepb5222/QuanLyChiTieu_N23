@@ -52,24 +52,25 @@ public class MainActivity extends AppCompatActivity {
                 List<Fragment> fragments =getSupportFragmentManager().getFragments();
                 Fragment fragment=fragments.get(fragments.size()-1);
 
-                if(fragment instanceof LoaiThuFragment){
-                   LoaiThuDialog dialog=new LoaiThuDialog(currentContext,
-                (LoaiThuFragment) fragment);
-                  dialog.show();
+                if(fragment instanceof KhoanThuFragment)
+                {
+                    ThuDialog dialog=new ThuDialog(currentContext,(KhoanThuFragment) fragment);
+                    dialog.show();
+                }
+                else if(fragment instanceof LoaiThuFragment){
+                    LoaiThuDialog dialog=new LoaiThuDialog(currentContext,
+                            (LoaiThuFragment) fragment);
+                    dialog.show();
                 }
                 else if (fragment instanceof KhoanChiFragment)
                 {
                     ChiDialog dialog = new ChiDialog(currentContext ,(KhoanChiFragment) fragment);
                     dialog.sshow();
 
-                }else if (fragment instanceof LoaiChiFragment){
+                }
+                  else  if (fragment instanceof LoaiChiFragment){
                     LoaiChiDialog dialog = new LoaiChiDialog(currentContext, (LoaiChiFragment) fragment);
                     dialog.sshow();
-                }
-                else if(fragment instanceof KhoanThuFragment)
-                {
-                    ThuDialog dialog=new ThuDialog(currentContext,(KhoanThuFragment) fragment);
-                    dialog.show();
                 }
 
             }
