@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/xanh"
+    android:background="@drawable/backgroud_app"
     android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
@@ -69,7 +69,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -85,7 +86,7 @@
                         android:layout_margin="5dp"
                         android:gravity="center"
                         android:text="Ứng dụng quản lý tài chính cá nhân"
-                        android:textSize="25dp"
+                        android:textSize="20dp"
                         android:textStyle="bold" />
 
                     <TextView
