@@ -24,7 +24,7 @@ public class KhoanChiDetailDialog {
     private LayoutInflater mLayoutInflater2;
     private AlertDialog mDialog;
 
-    private TextView tvID,tvNamelchi,tvNameChi,tvAmount2,tvGhiChu;
+    private TextView tvID,tvNamelchi,tvNameChi,tvAmount2,tvGhiChu,tvdate2;
     private boolean mEditmode;
 
     public KhoanChiDetailDialog(final Context context, KhoanChiFragment fragment, Chi chi)
@@ -38,12 +38,15 @@ public class KhoanChiDetailDialog {
         tvNamelchi = view.findViewById(R.id.tvNameLChi);
         tvAmount2 = view.findViewById(R.id.tvAmount2);
         tvGhiChu = view.findViewById(R.id.tvghichu2);
+        tvdate2=view.findViewById(R.id.tvDate2);
+
 
         tvID.setText(""+chi.chiID);
         tvNameChi.setText(""+chi.ten);
         tvNamelchi.setText(""+chi.idChi);
         tvAmount2.setText(""+chi.soTien);
         tvGhiChu.setText(""+chi.ghiChu);
+        tvdate2.setText(""+chi.date);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context)
                 .setView(view)

@@ -26,10 +26,13 @@ public class ChiRepository {
     public LiveData<Float> sumTongChi() {
         return mchiDao.sumTongChi();
     }
-
+    public LiveData<List<Chi>> Thongkechi() {
+        return mchiDao.findall();
+    }
     public LiveData<List<ThongKeLoaiChi>> sumbyLoaiChi() {
         return mchiDao.sumbyLoaiChi();
     }
+
 
     public void delete(Chi chi){
         new DeleteAsyncTask(mchiDao).execute(chi);

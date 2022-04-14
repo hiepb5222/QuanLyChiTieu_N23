@@ -20,7 +20,7 @@ public class ThuDetailDialog {
     private LayoutInflater mLayoutInflater;
     private AlertDialog mDialog;
 
-    private TextView tvidThu,tvNamelThu,tvNameThu,tvAmount,tvGhichu;
+    private TextView tvidThu,tvNamelThu,tvNameThu,tvAmount,tvGhichu,tvdate1;
     private boolean mEditmode;
 
     public ThuDetailDialog(final Context context, KhoanThuFragment fragment, Thu Thu) {
@@ -32,12 +32,14 @@ public class ThuDetailDialog {
         tvNameThu=view.findViewById(R.id.tvNameThu);
         tvAmount=view.findViewById(R.id.tvAmount);
         tvGhichu=view.findViewById(R.id.tvghichu);
+        tvdate1=view.findViewById(R.id.tvDate1);
 
         tvidThu.setText(""+Thu.tid);
         tvNamelThu.setText(""+Thu.ltid);
         tvNameThu.setText(Thu.ten);
         tvAmount.setText(""+Thu.sotien);
         tvGhichu.setText(Thu.ghichu);
+        tvdate1.setText(Thu.date);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context)
                 .setView(view)

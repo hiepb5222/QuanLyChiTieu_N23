@@ -31,6 +31,11 @@ public class ThuRepository {
         return mThuDao.sumTongThu();
     }
 
+    public LiveData<List<Thu>> ThongkeThu()
+    {
+        return mThuDao.findall();
+    }
+
     public LiveData<List<ThongKeLoaiThu>> sumbyLoaiThu()
     {
         return mThuDao.sumbyLoaiThu();

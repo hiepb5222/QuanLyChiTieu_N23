@@ -20,7 +20,10 @@
             android:id="@+id/nav_thongke"
             android:icon="@drawable/ic_chart_24"
             android:title="Thống Kê" />
-
+        <item
+            android:id="@+id/nav_thongkekhoan"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Thống Kê Khoản"/>
     </group>
     <item android:title="Giới Thiệu">
         <menu>
