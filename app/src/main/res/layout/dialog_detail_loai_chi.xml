@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#75AFDC"
+        android:background="@drawable/custom_title"
         android:orientation="vertical">
 
         <TextView
@@ -16,10 +16,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="#00BCD4"
+            android:background="@drawable/custom_title"
             android:gravity="center"
+            android:textColor="#FFF"
             android:text="Thông tin Loại Chi"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <ScrollView
