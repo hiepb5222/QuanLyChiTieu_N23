@@ -45,12 +45,12 @@ public class ChiFragment extends Fragment {
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                 if(position==0){
                     tab.setText("Khoản Chi");
-                    tab.setIcon(R.drawable.ic_menu_camera);
+                    tab.setIcon(R.drawable.ic_pay_24);
                 }
                 else
                 {
                     tab.setText("Loại Khoản Chi");
-                    tab.setIcon(R.drawable.ic_menu_camera);
+                    tab.setIcon(R.drawable.ic_kthu);
                 }
             }
         }).attach();

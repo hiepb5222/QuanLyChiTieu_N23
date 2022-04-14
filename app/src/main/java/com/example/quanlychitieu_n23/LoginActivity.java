@@ -12,9 +12,8 @@ import android.widget.Toast;
 import com.example.quanlychitieu_n23.Dao.UserDAo;
 import com.example.quanlychitieu_n23.Dao.Database;
 import com.example.quanlychitieu_n23.Entity.UserEntity;
-import java.lang.Thread;
+import com.example.quanlychitieu_n23.ui.home.HomeFragment;
 import java.lang.Runnable;
-
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -34,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String useridtext = userid.getText().toString();
                 String passtext = password.getText().toString();
                 if (useridtext.isEmpty() || passtext.isEmpty()){
@@ -46,10 +46,39 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             UserEntity userEntity = userDAo.login(useridtext,passtext);
-                            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-                            startActivity(intent);
+                            if(userEntity == null){
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Toast.makeText(getApplicationContext(),"II",Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }else
+                            {
+                                Intent intent= new Intent(LoginActivity.this,MainActivity.class);
+                                startActivity(intent);
+                            }
                         }
                     }).start();
+//                    new Thread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            UserEntity userEntity = userDAo.login(useridtext,passtext);
+//                            if(userEntity == null){
+//                                runOnUiThread(new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        Toast.makeText(getApplicationContext(),"II",Toast.LENGTH_SHORT).show();
+//                                    }
+//
+//                                });
+//                            }else{
+//                                Intent intent= new Intent(LoginActivity.this,MainActivity.class);
+//                                startActivity(intent);
+//                            }
+//                        }
+//                    }).start();
+
                 }
             }
         });
