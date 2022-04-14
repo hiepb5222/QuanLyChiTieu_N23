@@ -31,7 +31,7 @@ public class LoaiThuDetailDialog {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context)
                 .setView(view)
-                .setNegativeButton("Dong", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Đóng", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         mDialog.dismiss();

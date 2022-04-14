@@ -37,13 +37,13 @@ public class LoaiThuDialog {
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(context)
                 .setView(view)
-                .setNegativeButton("Dong", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Đóng", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         mDialog.dismiss();
                     }
                 })
-                .setPositiveButton("Luu", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Lưu", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         LoaiThu lt=new LoaiThu();
@@ -54,7 +54,7 @@ public class LoaiThuDialog {
                         }
                         else {
                             mViewModel.insert(lt);
-                            Toast.makeText(context, "Loai Thu duoc luu", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Loại thu được lưu", Toast.LENGTH_SHORT).show();
                         }
 
                     }

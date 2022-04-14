@@ -108,7 +108,7 @@ public class ThuDialog {
                         }
                         else {
                             mViewModel.insert(lt);
-                            Toast.makeText(context, "Loai Thu duoc luu", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Thu được Lưu", Toast.LENGTH_SHORT).show();
                         }
 
                     }
