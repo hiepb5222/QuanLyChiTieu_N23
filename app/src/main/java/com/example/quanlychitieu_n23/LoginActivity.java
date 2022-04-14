@@ -50,7 +50,8 @@ public class LoginActivity extends AppCompatActivity {
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Toast.makeText(getApplicationContext(),"II",Toast.LENGTH_SHORT).show();
+                                        // 14/4
+                                        Toast.makeText(getApplicationContext(),"Sai tài khoản hoặc mật khẩu",Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }else
@@ -60,24 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                             }
                         }
                     }).start();
-//                    new Thread(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            UserEntity userEntity = userDAo.login(useridtext,passtext);
-//                            if(userEntity == null){
-//                                runOnUiThread(new Runnable() {
-//                                    @Override
-//                                    public void run() {
-//                                        Toast.makeText(getApplicationContext(),"II",Toast.LENGTH_SHORT).show();
-//                                    }
-//
-//                                });
-//                            }else{
-//                                Intent intent= new Intent(LoginActivity.this,MainActivity.class);
-//                                startActivity(intent);
-//                            }
-//                        }
-//                    }).start();
+
 
                 }
             }

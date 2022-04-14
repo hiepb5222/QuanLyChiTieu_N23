@@ -33,15 +33,36 @@ public class SignInActivity extends AppCompatActivity {
                 UserEntity userEntity = new UserEntity();
                 userEntity.setUserID(userid.getText().toString());
                 userEntity.setPassword(password.getText().toString());
-                Database userDatabase =Database.getDatabase(getApplicationContext());
-                UserDAo userDAo = userDatabase.userDAo();
-                userDAo.registerUser(userEntity);
-
-
+                if (checkNull(userEntity)){
+                    Database userDatabase =Database.getDatabase(getApplicationContext());
+                    UserDAo userDAo = userDatabase.userDAo();
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            userDAo.registerUser(userEntity);
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(SignInActivity.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(SignInActivity.this,LoginActivity.class));
+                                }
+                            });
+                        }
+                    }).start();
+                }
+                else{
+                    Toast.makeText(SignInActivity.this, "Vui lòng nhập đầy đủ", Toast.LENGTH_SHORT).show();
+                }
 
 
             }
         });
 
+    }
+    private Boolean checkNull(UserEntity userEntity){
+        if(userEntity.getUserID().isEmpty() || userEntity.getPassword().isEmpty()){
+            return false;
+        }
+        return true;
     }
 }
