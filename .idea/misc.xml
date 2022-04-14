@@ -40,15 +40,22 @@
         <entry key="..\:/Android Project/QuanLyChiTieu_N23/app/src/main/res/layout/recyclerview_thu_item.xml" value="0.264" />
         <entry key="..\:/Android Project/QuanLyChiTieu_N23/app/src/main/res/layout/spinner_chi_item.xml" value="0.2" />
         <entry key="..\:/Android Project/QuanLyChiTieu_N23/app/src/main/res/layout/spinner_thu_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/drawable-v24/ic_kthu_2.xml" value="0.1" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/drawable-v24/ic_pay_23.xml" value="0.1" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/drawable/bo_tron.xml" value="0.2325" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/drawable/custom_button.xml" value="0.1" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/drawable/custom_dialog.xml" value="0.2325" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/drawable/custom_radius_16.xml" value="0.1" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/drawable/custom_title.xml" value="0.2325" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/drawable/ic_kthu.xml" value="0.1845" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/drawable/ic_pay_24.xml" value="0.1" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/activity_sign_in.xml" value="0.2" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/app_bar_main.xml" value="0.2" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/content_main.xml" value="0.13496376811594202" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_acc.xml" value="0.26902173913043476" />
-        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_chi.xml" value="0.33" />
+        <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_chi.xml" value="0.2" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_detail_chi.xml" value="0.2" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_detail_khoan_thu.xml" value="0.264" />
         <entry key="..\:/QuanLyChiTieu_N23/app/src/main/res/layout/dialog_detail_loai_chi.xml" value="0.5" />

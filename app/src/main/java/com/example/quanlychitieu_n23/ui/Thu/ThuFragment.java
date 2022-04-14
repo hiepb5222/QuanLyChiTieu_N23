@@ -46,12 +46,12 @@ public class ThuFragment extends Fragment {
                 if(position==0)
                 {
                     tab.setText("Khoản Thu");
-                    tab.setIcon(R.drawable.ic_pay_24);
+                    tab.setIcon(R.drawable.ic_pay_23);
 
             }
                 else {
                     tab.setText("Loại Khoản Thu");
-                    tab.setIcon(R.drawable.ic_kthu);
+                    tab.setIcon(R.drawable.ic_kthu_2);
                 }
             }
         }).attach();
