@@ -5,7 +5,7 @@
     <string name="nav_header_title">Ứng dụng quản lý chi tiêu</string>
     <string name="nav_header_subtitle">Bài tập lớp</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Cài đặt</string>
+    <string name="action_help">Hướng dẫn sử dụng</string>
 
     <string name="menu_home">Trang chủ</string>
     <string name="menu_gallery">Gallery</string>

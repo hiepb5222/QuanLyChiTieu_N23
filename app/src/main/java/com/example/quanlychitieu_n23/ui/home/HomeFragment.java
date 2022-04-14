@@ -85,48 +85,8 @@ public class HomeFragment extends Fragment {
             });
 
         }
-//        tongThu1 = thuDao.sumTongThu1();
-//        tongChi1 = chiDao.sumTongChi1();
-//        if(tongThu1==null||tongChi1==null){
-//            a.setText("Bắt đầu sử dụng dịch vụ:<");
-//        }else
-//        {
-//            tongThu1 = thuDao.sumTongThu1();
-//            tongChi1 = chiDao.sumTongChi1();
-//            Sodu = tongThu1 -tongChi1;
-//            a = view.findViewById(R.id.sotiencon);
-//
-//            if (Sodu>=0){
-//                a.setText(Sodu+" đ");
-//            }else
-//            {
-//                a.setText("Tài khoản của bạn âm :<");
-//            }
-//
-//            b = view.findViewById(R.id.imageVieweye);
-//
-//            b.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    if (check==0){
-//                        a.setText("******");
-//                        check = 1;
-//                    }
-//                    else {
-//                        if (Sodu>=0){
-//                            a.setText(Sodu+" đ");
-//                            check = 0;
-//                        }else
-//                        {
-//                            a.setText("Tài khoản của bạn âm :<");
-//                            check = 0;
-//                        }
-//                    }
-//                }
-//            });
-    }
 
-//}
+    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
