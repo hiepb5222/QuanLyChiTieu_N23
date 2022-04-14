@@ -22,10 +22,10 @@
             android:title="Thống Kê" />
         <item
             android:id="@+id/nav_thongkekhoan"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_baseline_table_chart_24"
             android:title="Thống Kê Theo Khoản"/>
     </group>
-    <item android:title="Giới Thiệu">
+    <item android:title="Tiện Ích">
         <menu>
             <item android:title="Tài khoản" android:id="@+id/nav_gioithieu"
                 android:icon="@drawable/ic_account_24"/>

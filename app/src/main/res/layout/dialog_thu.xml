@@ -9,17 +9,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="#52D9DD"
+        android:background="@drawable/custom_title"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="12dp"
             android:gravity="center"
-            android:text="Loại thu"
-            android:textSize="20sp" />
+            android:text="Khoản thu"
+            android:textColor="#FFF"
+            android:textSize="25sp" />
     </LinearLayout>
 
     <ScrollView
@@ -39,7 +40,8 @@
                     android:id="@+id/etid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Mã khoản thu" />
+                    android:hint="Mã khoản thu"
+                    android:inputType="number" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -58,7 +60,8 @@
                     android:id="@+id/etName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tên khoản thu" />
+                    android:hint="Tên khoản thu"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -70,7 +73,8 @@
                     android:id="@+id/etAmount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Số tiền" />
+                    android:hint="Số tiền"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -93,7 +97,8 @@
                     android:id="@+id/etDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Chọn Ngày" />
+                    android:hint="Chọn Ngày"
+                    android:inputType="date" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </ScrollView>
