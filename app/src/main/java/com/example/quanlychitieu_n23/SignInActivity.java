@@ -35,13 +35,10 @@ public class SignInActivity extends AppCompatActivity {
                 userEntity.setPassword(password.getText().toString());
                 Database userDatabase =Database.getDatabase(getApplicationContext());
                 UserDAo userDAo = userDatabase.userDAo();
-//                new Thread(() -> {
-                    userDAo.registerUser(userEntity);
-//                    new Thread(() ->
-                    Toast.makeText(getApplicationContext(),"Thành công",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(SignInActivity.this,LoginActivity.class);
-                    startActivity(intent);
-//                }).start();
+                userDAo.registerUser(userEntity);
+
+
+
 
             }
         });
